@@ -1,6 +1,0 @@
-#downloadDate:20230116124612
-#numberOfSitesDownloaded:1
-#dataFiles
-SITE_ID,filename,start_year,end_year,version,filetype,timestamp
-US-MBP,AMF_US-MBP_BASE_HH_2-5.csv,2009,2021,2-5,FLUX-MET,202204281403
-US-MBP,AMF_US-MBP_BIF_20220428.xlsx,,,20220428,BADM,202204281417

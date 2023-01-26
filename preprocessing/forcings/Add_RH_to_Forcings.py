@@ -10,7 +10,7 @@ from glob import glob
 #%%
 '''SUBSET RH DATA'''
 
-data = pd.read_csv("D:/1_DesktopBackup/Feng Research/CLM/MEF_Fluxnet/AMF_US-MBP_BASE_HH_2-5.csv", 
+data = pd.read_csv("preprocessing/inputdata/AMF_US-MBP_BASE_HH_2-5.csv", 
     skiprows = 2, 
     na_values = -9999)
 
@@ -21,7 +21,7 @@ data = data.rename(columns = {'TIMESTAMP_START':'TIMESTAMP'})
 
 '''
 #TRY EDI Data          
-data = pd.read_csv('D:/1_DesktopBackup/Feng Research/CLM\MEF_Fluxnet/BogLake_Met_data_30min.csv', skiprows = 1, sep = ",", 
+data = pd.read_csv('preprocessing/inputdata/BogLake_Met_data_30min.csv', skiprows = 1, sep = ",", 
     names=["TIMESTAMP", "Air_TempC_Avg", "RH", "Soil_TempC_5cm", "Soil_TempC_10cm", "Soil_TempC_20cm",     
             "Soil_TempC_30cm", "Soil_TempC_40cm", "Soil_TempC_50cm", "Soil_TempC_100cm",  "Soil_TempC_200cm",     
             "WS_Tot",  "WindDir_D",  "WindDir_SD",  "PAR_Den_Avg"],
@@ -42,7 +42,7 @@ RH['Year-Month'] = RH.TIMESTAMP.dt.strftime('%Y') + '-' + RH.TIMESTAMP.dt.strfti
 RH = RH[(RH.Year > 2010) & (RH.Year < 2018)]
 
 #Patch long NA period in August 2017 with data from the NADP site in the EDI data
-patch_data = pd.read_csv('D:/1_DesktopBackup/Feng Research/CLM\MEF_Fluxnet/NADP_Met_data_30min.csv', skiprows = 1, sep = ",", 
+patch_data = pd.read_csv('preprocessing/inputdata/NADP_Met_data_30min.csv', skiprows = 1, sep = ",", 
     names=["TIMESTAMP", "Air_TempC_Avg", "RH", "Soil_TempC_Avg", "WS_Tot", "WindDir_D", "WindDir_SD", "PAR_Den_Avg", "Soil_VWC_Avg"],
     parse_dates = ['TIMESTAMP'],
     na_values = {'RH':['NA',]})
@@ -96,11 +96,11 @@ for val in vals:
                 'units': '%' })
 
     #Write sample
-    test2.to_netcdf('D:/1_DesktopBackup/Feng Research/CLM/forcings-modified/' + val + '.nc')
+    test2.to_netcdf('preprocessin/forcings-modified' + val + '.nc')
     
 
 # %%
 '''CHECK'''
 #Open file to check
-dat = xr.open_mfdataset('D:/1_DesktopBackup/Feng Research/CLM/forcings-modified/2017-08.nc')
+dat = xr.open_mfdataset('preprocessing/forcings-modified/2017-08.nc')
 # %%
