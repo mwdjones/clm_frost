@@ -58,22 +58,13 @@ for i in range(0, len(params[PARAM])):
 		#Create case
 		os.chdir(CIMEROOT_DIR + '/scripts')
 		subprocess.check_output(['./create_newcase',
-<<<<<<< HEAD
 						'--case=%s' % CASE_DIR,
 						'--compset=%s' % COMPSET,
 						'--user-mods-dir=%s' % USER_MODS_DIR,
 						'--res=CLM_USRDAT', 
 						'--project=UMIN0008', 
-						'--run-unsupported'])
-=======
-								'--case=%s' % CASE_DIR,
-								'--compset=%s' % COMPSET,
-								'--user-mods-dir=%s' % USER_MODS_DIR,
-								'--res=CLM_USRDAT', 
-								'--project=UMIN0008', 
-								'--run-unsupported', 
-								'--handle-preexisitng-dirs=r'])
->>>>>>> 7fbbb91d85b78bd63846b43ccd6d634721ac3d77
+						'--run-unsupported',
+						'--handle-preexisitng-dirs=r'])
 	else:
 		print('Case already exists.')
 
