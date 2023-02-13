@@ -18,13 +18,19 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import xarray as xr
 
-'''Parameters'''
+######
+# Parameters
+######
+
 #Dictionary containing params and their test values
 #params = {}
 
-PARAM = 'SLOPEBETA' #One of 'slopebeta', 'mu', 'baseflow'
+PARAM = 'CONTROL' #One of 'slopebeta', 'mu', 'baseflow', 'control'
 
-'''Case Setup'''
+######
+# Case Setup
+######
+
 #Source Root - Where the CESM code lives
 SRCROOT_DIR = '/glade/u/home/marielj/cesm2.1.3'
 #CIME Root - Where the CIME code lives, i.e. where the create_newcase scripts are
@@ -36,28 +42,42 @@ USER_MODS_DIR = '/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/myda
 #Forcing Data Root - Where the atmospheric forcing data is
 CLMFORC_DIR = '/glade/u/home/marielj/inputdata/atm/datm7/CLM1PT_data'
 
-os.chdir(CIMEROOT_DIR + '/scripts')
-
 CASE_NAME = 'mbp_tuning_nospinup_' + PARAM + '_v' + '0' # + str(i) - will eventually loop through values
 CASE_DIR = CASEROOT_DIR + '/' + CASE_NAME
 COMPSET = '2000_DATM%1PT_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV'  #I1PtClm50SpGs
 
-subprocess.check_output(['./create_newcase',
+
+#Check if directory exists - if not, create new case
+if(not os.path.exists(CASE_DIR)):
+	print('Case does not exist. Creating new case.')
+	#Create case
+	os.chdir(CIMEROOT_DIR + '/scripts')
+	subprocess.check_output(['./create_newcase',
                             '--case=%s' % CASE_DIR,
                             '--compset=%s' % COMPSET,
                             '--user-mods-dir=%s' % USER_MODS_DIR,
                             '--res=CLM_USRDAT', 
                             '--project=UMIN0008', 
                             '--run-unsupported'])
+else:
+	print('Case already exists.')
 
 os.chdir(CASE_DIR)
 
-'''Set up case'''
+'''
+
+######
+# Set up case
+######
+
 pipe = subprocess.Popen(['./case.setup'], stdout=subprocess.PIPE)
 result = pipe.communicate()[0]
-print (result)
+print(result)
+print('Setup complete')
 
-'''Change XML'''
+######
+# Change XML
+######
 
 #General
 subprocess.check_output(['./xmlchange', 'DATM_MODE=CLM1PT'])
@@ -85,17 +105,55 @@ subprocess.check_output(['./xmlchange', 'DIN_LOC_ROOT_CLMFORC=%s' % CLMFORC_DIR]
 #History files
 file_name = 'user_nl_clm'
 f = open(file_name, 'w')
-f.write(" hist_nhtfrq = 0,-24\n hist_mfilt  = 1200,365\n hist_fincl2 = 'RAIN', 'H2OSNO', 'QSOIL', 'QVEGT', 'QSNOMELT', 'QRUNOFF', 'ZWT', 'ZWT_PERCH', 'SNOW', 'TSA', 'SOILICE', 'QINFL'")
+f.write(" fsurdat = '/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP/surfdata_1x1pt_US-MBP_hist_16pfts_Irrig_CMIP6_simyr2000_c230123.nc'\n hist_nhtfrq = 0,-24\n hist_mfilt  = 1200,365\n hist_fincl2 = 'RAIN', 'H2OSNO', 'QSOIL', 'QVEGT', 'QSNOMELT', 'QRUNOFF', 'ZWT', 'ZWT_PERCH', 'SNOW', 'TSA', 'SOILICE', 'QINFL'")
 f.close()
 
 
-'''Make Parameter Change'''
+######
+# Make Parameter Change
+######
 
+######
+# Run Simulation
+######
 
-'''Run Simulation'''
-pipe = subprocess.Popen(['qcmd -- ./case.build'], stdout=subprocess.PIPE)
+#Clear run directory
+pipe = subprocess.Popen(['./case.build', '--clean-all'], stdout=subprocess.PIPE)
+
+#Build
+pipe = subprocess.Popen(['qcmd', '-- ./case.build'], stdout=subprocess.PIPE)
 result = pipe.communicate()[0]
-print (result)
+print(result)
+print(CASE_NAME + " Build Complete")
 
-'''Check Output'''
+#Run
+pipe = subprocess.Popen(['qcmd', '-- ./case.submit'], stdout=subprocess.PIPE)
+result = pipe.communicate()[0]
+print(result)
+print(CASE_NAME + " Run Complete")
+
+'''
+
+######
+# Store Output
+######
+
+#Make Save Folder
+os.mkdir('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)
+SAVEPATH = '/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/' + CASE_NAME
+SCRATCH_DIR = '/glade/scratch/marielj/' + CASE_NAME + '/run'
+FILE_NAME = CASE_NAME + '*' + '.h1.' + '*' + '.nc'
+
+#Check if history files have been saved, if not, save them
+os.chdir(SCRATCH_DIR)
+
+files = glob.glob(FILE_NAME)
+for file in files:
+	if(not os.path.isfile(SAVEPATH + '/' + file)):
+		shutil.copy2(file, SAVEPATH)
+		print(file + " did not exist. Saved.")
+	else:
+		print(file + " already exists.")
+
+
 
