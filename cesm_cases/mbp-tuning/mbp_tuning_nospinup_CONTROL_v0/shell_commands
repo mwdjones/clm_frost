@@ -1,0 +1,15 @@
+# shell commands to execute xmlchange --force commands written by PTCLMmkdata:
+# ./PTCLMmkdata -d /glade/p/cesmdata/cseg/inputdata -s US-MBP --ctsm_root /glade/u/home/marielj/cesm2.1.3/components/clm --cime_root /glade/u/home/marielj/cesm2.1.3/cime --donot_use_tower_yrs 
+./xmlchange --force CLM_USRDAT_NAME=1x1pt_US-MBP
+# Comment this out if NINST_LND is greater than 1 (see: http://bugs.cgd.ucar.edu/show_bug.cgi?id=2521)
+./xmlchange --force MPILIB=mpi-serial
+./xmlchange --force ATM_DOMAIN_PATH=/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP
+./xmlchange --force LND_DOMAIN_PATH=/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP
+./xmlchange --force ATM_DOMAIN_FILE=domain.lnd.1x1pt_US-MBP_navy.230123.nc
+./xmlchange --force LND_DOMAIN_FILE=domain.lnd.1x1pt_US-MBP_navy.230123.nc
+./xmlchange --force --append CLM_BLDNML_OPTS='-mask navy -no-crop'
+./xmlchange --force CALENDAR=GREGORIAN
+./xmlchange --force DOUT_S=FALSE
+./xmlchange --force ATM_NCPL=48
+./xmlchange --force DIN_LOC_ROOT=/glade/p/cesmdata/cseg/inputdata
+./xmlchange --force DIN_LOC_ROOT_CLMFORC=/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles
