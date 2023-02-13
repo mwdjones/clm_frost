@@ -58,12 +58,22 @@ for i in range(0, len(params[PARAM])):
 		#Create case
 		os.chdir(CIMEROOT_DIR + '/scripts')
 		subprocess.check_output(['./create_newcase',
+<<<<<<< HEAD
 						'--case=%s' % CASE_DIR,
 						'--compset=%s' % COMPSET,
 						'--user-mods-dir=%s' % USER_MODS_DIR,
 						'--res=CLM_USRDAT', 
 						'--project=UMIN0008', 
 						'--run-unsupported'])
+=======
+								'--case=%s' % CASE_DIR,
+								'--compset=%s' % COMPSET,
+								'--user-mods-dir=%s' % USER_MODS_DIR,
+								'--res=CLM_USRDAT', 
+								'--project=UMIN0008', 
+								'--run-unsupported', 
+								'--handle-preexisitng-dirs=r'])
+>>>>>>> 7fbbb91d85b78bd63846b43ccd6d634721ac3d77
 	else:
 		print('Case already exists.')
 
@@ -104,7 +114,7 @@ for i in range(0, len(params[PARAM])):
 
 	#Set Forcing data directory
 	subprocess.check_output(['./xmlchange', 'DIN_LOC_ROOT_CLMFORC=%s' % CLMFORC_DIR])
-	
+
 	#History files
 	file_name = 'user_nl_clm'
 	f = open(file_name, 'w')
@@ -131,13 +141,13 @@ for i in range(0, len(params[PARAM])):
 	pipe = subprocess.Popen(['./case.build', '--clean-all'], stdout=subprocess.PIPE)
 
 	#Build
-	pipe = subprocess.Popen(['qcmd', '-- ./case.build'], stdout=subprocess.PIPE)
+	pipe = subprocess.Popen(['./case.build'], stdout=subprocess.PIPE)
 	result = pipe.communicate()[0]
 	print(result)
 	print(CASE_NAME + " Build Complete")
 
 	#Run
-	pipe = subprocess.Popen(['qcmd', '-- ./case.submit'], stdout=subprocess.PIPE)
+	pipe = subprocess.Popen(['./case.submit'], stdout=subprocess.PIPE)
 	result = pipe.communicate()[0]
 	print(result)
 	print(CASE_NAME + " Run Complete")
