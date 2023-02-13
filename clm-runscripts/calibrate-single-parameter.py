@@ -63,7 +63,8 @@ for i in range(0, len(params[PARAM])):
 								'--user-mods-dir=%s' % USER_MODS_DIR,
 								'--res=CLM_USRDAT', 
 								'--project=UMIN0008', 
-								'--run-unsupported'])
+								'--run-unsupported', 
+								'--handle-preexisitng-dirs=r'])
 	else:
 		print('Case already exists.')
 
@@ -104,9 +105,9 @@ for i in range(0, len(params[PARAM])):
 
 	#Set Forcing data directory
 	subprocess.check_output(['./xmlchange', 'DIN_LOC_ROOT_CLMFORC=%s' % CLMFORC_DIR])
-	
+
 	#History files
-	file_name = 'testfile.txt' #'user_nl_clm'
+	file_name = 'user_nl_clm'
 	f = open(file_name, 'w')
 	f.write(" fsurdat = '/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP/surfdata_1x1pt_US-MBP_hist_16pfts_Irrig_CMIP6_simyr2000_c230123.nc'\n")
 	f.write(" hist_nhtfrq = 0,-24\n")
@@ -131,13 +132,13 @@ for i in range(0, len(params[PARAM])):
 	pipe = subprocess.Popen(['./case.build', '--clean-all'], stdout=subprocess.PIPE)
 
 	#Build
-	pipe = subprocess.Popen(['qcmd', '-- ./case.build'], stdout=subprocess.PIPE)
+	pipe = subprocess.Popen(['./case.build'], stdout=subprocess.PIPE)
 	result = pipe.communicate()[0]
 	print(result)
 	print(CASE_NAME + " Build Complete")
 
 	#Run
-	pipe = subprocess.Popen(['qcmd', '-- ./case.submit'], stdout=subprocess.PIPE)
+	pipe = subprocess.Popen(['./case.submit'], stdout=subprocess.PIPE)
 	result = pipe.communicate()[0]
 	print(result)
 	print(CASE_NAME + " Run Complete")
