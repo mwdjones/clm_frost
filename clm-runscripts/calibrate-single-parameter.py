@@ -106,7 +106,7 @@ for i in range(0, len(params[PARAM])):
 	subprocess.check_output(['./xmlchange', 'DIN_LOC_ROOT_CLMFORC=%s' % CLMFORC_DIR])
 	
 	#History files
-	file_name = 'testfile.txt' #'user_nl_clm'
+	file_name = 'user_nl_clm'
 	f = open(file_name, 'w')
 	f.write(" fsurdat = '/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP/surfdata_1x1pt_US-MBP_hist_16pfts_Irrig_CMIP6_simyr2000_c230123.nc'\n")
 	f.write(" hist_nhtfrq = 0,-24\n")
