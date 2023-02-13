@@ -30,7 +30,7 @@ SRCROOT_DIR = '/glade/u/home/marielj/cesm2.1.3'
 #CIME Root - Where the CIME code lives, i.e. where the create_newcase scripts are
 CIMEROOT_DIR = '/glade/u/home/marielj/cesm2.1.3/cime'
 #Case Root - Where all the CESM cases are stored
-CASEROOT_DIR = '/glade/u/home/marielj/clm-frost/cesm_cases/mbp-tuning'
+CASEROOT_DIR = '/glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning'
 #User Mods Dir - Where the surface and domain files are
 USER_MODS_DIR = '/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP'
 #Forcing Data Root - Where the atmospheric forcing data is
@@ -48,7 +48,7 @@ subprocess.check_output(['./create_newcase',
                             '--user-mods-dir=%s' % USER_MODS_DIR,
                             '--res=CLM_USRDAT', 
                             '--project=UMIN0008', 
-                            '--run_unsupported'])
+                            '--run-unsupported'])
 
 os.chdir(CASE_DIR)
 
