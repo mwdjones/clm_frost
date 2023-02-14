@@ -5,7 +5,7 @@
 #PBS -q economy
 #PBS -j oe
 #PBS -k eod
-#PBS -l select=1:ncpus=18:mem=128GB
+#PBS -l select=3:ncpus=1:mpiprocs=1:mem=109GB
 #PBS -m abe
 #PBS -M jone3247@umn.edu
  

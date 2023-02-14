@@ -64,7 +64,7 @@ for i in range(0, len(params[PARAM])):
 						'--res=CLM_USRDAT', 
 						'--project=UMIN0008', 
 						'--run-unsupported',
-						'--handle-preexisitng-dirs=r'])
+						'--handle-preexisting-dirs=r'])
 	else:
 		print('Case already exists.')
 
@@ -148,7 +148,10 @@ for i in range(0, len(params[PARAM])):
 	######
 
 	#Make Save Folder
-	os.mkdir('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)
+	#Check for directory
+	if(not os.path.exists('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)):
+		os.mkdir('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)
+	
 	SAVEPATH = '/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/' + CASE_NAME
 	SCRATCH_DIR = '/glade/scratch/marielj/' + CASE_NAME + '/run'
 	FILE_NAME = CASE_NAME + '*' + '.h1.' + '*' + '.nc'
@@ -163,7 +166,6 @@ for i in range(0, len(params[PARAM])):
 			print(file + " did not exist. Saved.")
 		else:
 			print(file + " already exists.")
-
 
 
 
