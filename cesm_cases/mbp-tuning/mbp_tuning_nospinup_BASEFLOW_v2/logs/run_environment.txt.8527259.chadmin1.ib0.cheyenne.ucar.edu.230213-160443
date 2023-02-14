@@ -1,0 +1,222 @@
+Currently Loaded Modules:
+  1) ncarenv/1.2      (H)   5) esmf-7.1.0r-ncdfio-uni-O (H)
+  2) intel/17.0.1           6) ncarcompilers/0.5.0
+  3) esmf_libs/7.1.0r (H)   7) netcdf/4.5.0             (H)
+  4) mkl/2017.0.1
+
+  Where:
+   H:  Hidden Module
+
+MKLROOT=/glade/u/apps/opt/intel/2017u1/mkl
+LMOD_FAMILY_COMPILER_VERSION=17.0.1
+LESSKEY=/etc/lesskey.bin
+NNTPSERVER=news
+MANPATH=/glade/u/apps/ch/opt/netcdf/4.5.0/intel/17.0.1/share/man:/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux/man/common:/usr/local/man:/usr/share/man:/opt/pbs/share/man
+LMOD_FAMILY_ESMF_VERSION=false
+_ModuleTable003_=cFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW50ZWwvMTcuMC4xIix9LG1rbD17WyJmbiJdPSIvZ2xhZGUvdS9hcHBzL2NoL21vZHVsZWZpbGVzL2RlZmF1bHQvaW50ZWwvMTcuMC4xL21rbC8yMDE3LjAuMS5sdWEiLFsiZnVsbE5hbWUiXT0ibWtsLzIwMTcuMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibWtsIix9LG5jYXJjb21waWxlcnM9e1siZm4iXT0iL2dsYWRlL3UvYXBwcy9jaC9tb2R1bGVmaWxlcy9kZWZhdWx0L2ludGVsLzE3LjAuMS9uY2FyY29tcGlsZXJzLzAuNS4wLmx1YSIsWyJmdWxsTmFtZSJdPSJuY2FyY29t
+HOSTNAME=r6i1n14
+MPI_SYSLOG_COPY=2
+XKEYSYMDB=/usr/X11R6/lib/X11/XKeysymDB
+INTEL_LICENSE_FILE=28518@128.117.177.41
+PBS_ACCOUNT=UMIN0008
+__LMOD_REF_COUNT_MODULEPATH=/glade/u/apps/ch/modulefiles/default/esmfpkgs/intel/17.0.1:1;/glade/u/apps/ch/modulefiles/default/compilers:1;/glade/u/apps/ch/modulefiles/default/idep:1;/glade/u/apps/ch/modulefiles/default/intel/17.0.1:1
+HOST=r6i1n14
+SHELL=/bin/bash
+INTEL_MINOR_VERSION=0.1
+PROFILEREAD=true
+LMOD_ROOT=/glade/u/apps/ch/opt/lmod/8.7.13/lmod
+LUAROCKS_PREFIX=/glade/u/apps/ch/opt/lmod/8.7.13
+HISTSIZE=1000
+TMPDIR=/glade/scratch/marielj
+CESMDATAROOT=/glade/p/cesmdata/cseg
+LMOD_SYSTEM_DEFAULT_MODULES=ncarenv/1.3:intel/19.1.1:ncarcompilers/0.5.0:mpt/2.25:netcdf/4.8.1
+MODULEPATH_ROOT=/glade/u/apps/ch/modulefiles/default
+PBS_JOBNAME=run.mbp_tuning_nospinup_BASEFLOW_v2
+PBS_QSUB_SHELL_PATH=/bin/bash
+PERL5LIB=/glade/u/apps/ch/os/usr/lib/perl5/5.18.2/
+CONDA_SHLVL=1
+LBQUERY=FALSE
+OMP_STACKSIZE=256M
+PYTHONUNBUFFERED=1
+CONDA_PROMPT_MODIFIER=(cesm)
+LMOD_PKG=/glade/u/apps/ch/opt/lmod/8.7.13/lmod/lmod
+MORE=-sl
+PBS_ENVIRONMENT=PBS_BATCH
+GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
+QSCACHE_SERVER=cheyenne
+NCAR_INC_MKL=/glade/u/apps/opt/intel/2017u1/mkl/include
+PBS_O_TZ=America/Denver
+MPICXX_CXX=icpc
+ADVISOR_2017_DIR=/glade/u/apps/opt/intel/2017u1/advisor
+LMOD_VERSION=8.7.13
+PBS_O_WORKDIR=/glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_nospinup_BASEFLOW_v2
+__LMOD_REF_COUNT_LOADEDMODULES=ncarenv/1.2:1;intel/17.0.1:1;esmf_libs/7.1.0r:1;mkl/2017.0.1:1;esmf-7.1.0r-ncdfio-uni-O:1;ncarcompilers/0.5.0:1;netcdf/4.5.0:1
+NCPUS=1
+USER=marielj
+PBS_TASKNUM=1
+MPI_USE_ARRAY=false
+WRFIO_NCD_LARGE_FILE_SUPPORT=1
+LD_LIBRARY_PATH=/glade/u/apps/opt/intel/2017u1/mkl/lib/intel64:/glade/u/apps/opt/intel/2017u1/tbb/lib/intel64/gcc4.7:/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux/lib/intel64:/glade/u/apps/ch/os/usr/lib64:/glade/u/apps/ch/os/usr/lib:/glade/u/apps/ch/os/lib64:/glade/u/apps/ch/os/lib
+ESMF_LIBDIR=/glade/u/apps/ch/opt/esmf/7.1.0r-ncdfio/intel/17.0.1/lib/libg/Linux.intel.64.mpiuni.default
+LID=8527259.chadmin1.ib0.cheyenne.ucar.edu.230213-160443
+PBS_O_HOME=/glade/u/home/marielj
+LMOD_MODULERCFILE=/glade/u/apps/ch/modulefiles/default/localinit/hidden
+XNLSPATH=/usr/X11R6/lib/X11/nls
+ENV=/etc/profile.d/modules.sh
+_ModuleTable004_=cGlsZXJzLzAuNS4wIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibmNhcmNvbXBpbGVycy8wLjUuMCIsfSxuY2FyZW52PXtbImZuIl09Ii9nbGFkZS91L2FwcHMvY2gvbW9kdWxlZmlsZXMvZGVmYXVsdC9pZGVwL25jYXJlbnYvMS4yLmx1YSIsWyJmdWxsTmFtZSJdPSJuY2FyZW52LzEuMiIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im5jYXJlbnYvMS4yIix9LG5ldGNkZj17WyJmbiJdPSIvZ2xhZGUvdS9hcHBzL2NoL21vZHVsZWZpbGVzL2RlZmF1bHQvaW50ZWwvMTcuMC4xL25ldGNkZi80LjUu
+NCAR_LIBS_MKL=-lmkl_rt -lpthread -lm -ldl
+HOSTTYPE=x86_64
+__LMOD_REF_COUNT__LMFILES_=/glade/u/apps/ch/modulefiles/default/idep/ncarenv/1.2.lua:1;/glade/u/apps/ch/modulefiles/default/compilers/intel/17.0.1.lua:1;/glade/u/apps/ch/modulefiles/default/intel/17.0.1/esmf_libs/7.1.0r.lua:1;/glade/u/apps/ch/modulefiles/default/intel/17.0.1/mkl/2017.0.1.lua:1;/glade/u/apps/ch/modulefiles/default/esmfpkgs/intel/17.0.1/esmf-7.1.0r-ncdfio-uni-O.lua:1;/glade/u/apps/ch/modulefiles/default/intel/17.0.1/ncarcompilers/0.5.0.lua:1;/glade/u/apps/ch/modulefiles/default/intel/17.0.1/netcdf/4.5.0.lua:1
+FROM_HEADER=
+PBS_MOMPORT=15003
+NCAR_LDFLAGS_TBB=/glade/u/apps/opt/intel/2017u1/tbb/lib/intel64/gcc4.7
+NCAR_HOST=cheyenne
+NCAR_EXCLUDE_ASNEEDED=1
+PAGER=less
+CSHEDIT=emacs
+INTEL_MAJOR_VERSION=17.0
+XDG_CONFIG_DIRS=/etc/xdg
+_CE_CONDA=
+PBS_O_QUEUE=share
+NLSPATH=/glade/u/apps/opt/intel/2017u1/mkl/lib/intel64/locale/%l_%t/%N:/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux/lib/intel64/locale/%l_%t/%N
+MINICOM=-c on
+VTUNE_AMPLIFIER_2017_DIR=/glade/u/apps/opt/intel/2017u1/vtune_amplifier
+__LMOD_REF_COUNT_NLSPATH=/glade/u/apps/opt/intel/2017u1/mkl/lib/intel64/locale/%l_%t/%N:1;/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux/lib/intel64/locale/%l_%t/%N:1
+NCAR_LDFLAGS_MKLAUX=/glade/u/apps/ch/opt/mkl/2017.0.1/intel/17.0.1//lib
+NCAR_LDFLAGS_MKL=/glade/u/apps/opt/intel/2017u1/mkl/lib/intel64
+PATH=/glade/u/apps/ch/opt/netcdf/4.5.0/intel/17.0.1/bin:/glade/u/apps/ch/opt/ncarcompilers/0.5.0/intel/17.0.1:/glade/u/apps/ch/opt/ncarcompilers/0.5.0/intel/17.0.1/mpi:/glade/u/apps/ch/opt/esmf/7.1.0r-ncdfio/intel/17.0.1/bin/bing/Linux.intel.64.mpiuni.default:/glade/u/apps/opt/intel/2017u1/vtune_amplifier/bin64:/glade/u/apps/opt/intel/2017u1/inspector/bin64:/glade/u/apps/opt/intel/2017u1/advisor/bin64:/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux/bin/intel64:/glade/u/apps/opt/vncmgr:/glade/u/apps/opt/globus-utils:/glade/u/apps/ch/opt/usr/bin:/glade/work/marielj/conda-envs/cesm/bin:/glade/u/apps/ch/opt/lmod/8.7.13/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/opt/ibutils/bin:/opt/pbs/bin:/sbin:/glade/u/apps/opt/hpss/hpss-client.5.0.2.p5/bin:/glade/u/apps/ch/os/usr/bin:/glade/u/apps/ch/opt/hpe-cpe/22.02/bin
+PBS_O_LOGNAME=marielj
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIixbImVzbWYiXT0iZXNtZi03LjEuMHItbmNkZmlvLXVuaS1PIix9LG1UPXtbImVzbWYtNy4xLjByLW5jZGZpby11bmktTyJdPXtbImZuIl09Ii9nbGFkZS91L2FwcHMvY2gvbW9kdWxlZmlsZXMvZGVmYXVsdC9lc21mcGtncy9pbnRlbC8xNy4wLjEvZXNtZi03LjEuMHItbmNkZmlvLXVuaS1PLmx1YSIsWyJmdWxsTmFtZSJdPSJlc21mLTcuMS4wci1uY2RmaW8tdW5pLU8iLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2
+MAIL=/var/spool/mail/marielj
+MPI_DSM_DISTRIBUTE=0
+NCAR_GLOBUS_CAMPAIGN=6b5ab960-7bbf-11e8-9450-0a6d4e044368
+PBS_O_LANG=en_US.UTF-8
+CPU=x86_64
+GSETTINGS_SCHEMA_DIR=/glade/work/marielj/conda-envs/cesm/share/glib-2.0/schemas
+PBS_JOBCOOKIE=527515EE432E63D10050F18A539CD0F4
+CONDA_PREFIX=/glade/work/marielj/conda-envs/cesm
+NCAR_LDFLAGS_NETCDF=/glade/u/apps/ch/opt/netcdf/4.5.0/intel/17.0.1/lib
+F90=ifort
+INPUTRC=/etc/inputrc
+PWD=/glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_nospinup_BASEFLOW_v2
+_LMFILES_=/glade/u/apps/ch/modulefiles/default/idep/ncarenv/1.2.lua:/glade/u/apps/ch/modulefiles/default/compilers/intel/17.0.1.lua:/glade/u/apps/ch/modulefiles/default/intel/17.0.1/esmf_libs/7.1.0r.lua:/glade/u/apps/ch/modulefiles/default/intel/17.0.1/mkl/2017.0.1.lua:/glade/u/apps/ch/modulefiles/default/esmfpkgs/intel/17.0.1/esmf-7.1.0r-ncdfio-uni-O.lua:/glade/u/apps/ch/modulefiles/default/intel/17.0.1/ncarcompilers/0.5.0.lua:/glade/u/apps/ch/modulefiles/default/intel/17.0.1/netcdf/4.5.0.lua
+NCAR_PBS_CH=chadmin1.ib0.cheyenne.ucar.edu
+LUA_PATH=/glade/u/apps/ch/opt/lmod/8.7.13/share/lua/5.1/?.lua;/glade/u/apps/ch/opt/lmod/8.7.13/share/lua/5.1/?/init.lua;;
+LANG=en_US.UTF-8
+PBS_NODENUM=0
+PYTHONSTARTUP=/etc/pythonstart
+MODULEPATH=/glade/u/apps/ch/modulefiles/default/esmfpkgs/intel/17.0.1:/glade/u/apps/ch/modulefiles/default/compilers:/glade/u/apps/ch/modulefiles/default/idep:/glade/u/apps/ch/modulefiles/default/intel/17.0.1
+LUA_CPATH=/glade/u/apps/ch/opt/lmod/8.7.13/lib/lua/5.1/?.so;;
+NCAR_INC_NETCDF=/glade/u/apps/ch/opt/netcdf/4.5.0/intel/17.0.1/include
+LOADEDMODULES=ncarenv/1.2:intel/17.0.1:esmf_libs/7.1.0r:mkl/2017.0.1:esmf-7.1.0r-ncdfio-uni-O:ncarcompilers/0.5.0:netcdf/4.5.0
+TZ=America/Denver
+CIMEROOT=/glade/u/home/marielj/cesm2.1.3/cime/scripts/Tools/../..
+_ModuleTable_Sz_=6
+LMOD_SYSTEM_NAME=ch
+PBS_JOBDIR=/glade/u/home/marielj
+ARGS_FOR_SCRIPT=--resubmit
+F77=ifort
+PBS_O_SHELL=/bin/bash
+_ModuleTable005_=MC5sdWEiLFsiZnVsbE5hbWUiXT0ibmV0Y2RmLzQuNS4wIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibmV0Y2RmLzQuNS4wIix9LH0sbXBhdGhBPXsiL2dsYWRlL3UvYXBwcy9jaC9tb2R1bGVmaWxlcy9kZWZhdWx0L2VzbWZwa2dzL2ludGVsLzE3LjAuMSIsIi9nbGFkZS91L2FwcHMvY2gvbW9kdWxlZmlsZXMvZGVmYXVsdC9jb21waWxlcnMiLCIvZ2xhZGUvdS9hcHBzL2NoL21vZHVsZWZpbGVzL2RlZmF1bHQvaWRlcCIsIi9nbGFkZS91L2FwcHMvY2gvbW9kdWxlZmlsZXMvZGVmYXVsdC9pbnRlbC8xNy4wLjEiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL2dsYWRlL3UvYXBwcy9jaC9t
+MPI_IB_CONGESTED=1
+LMOD_COMPILER_VERSION=17.0.1
+LMOD_CMD=/glade/u/apps/ch/opt/lmod/8.7.13/lmod/lmod/libexec/lmod
+LM_LICENSE_FILE=28518@128.117.177.41
+INTEL_BASE_PATH=/glade/u/apps/opt/intel/2017u1
+PBS_JOBID=8527259.chadmin1.ib0.cheyenne.ucar.edu
+NCAR_PBS_CA=casper-pbs
+ESMFMKFILE=/glade/u/apps/ch/opt/esmf/7.1.0r-ncdfio/intel/17.0.1/lib/libg/Linux.intel.64.mpiuni.default/esmf.mk
+CXX=icpc
+ENVIRONMENT=BATCH
+_CE_M=
+LMOD_COMPILER=intel
+GPG_TTY=not a tty
+HOME=/glade/u/home/marielj
+SHLVL=6
+NCAR_GLOBUS_DSS=dd1ee92a-6d04-11e5-ba46-22000b92c6ec
+__LMOD_REF_COUNT_PATH=/glade/u/apps/ch/opt/netcdf/4.5.0/intel/17.0.1/bin:1;/glade/u/apps/ch/opt/ncarcompilers/0.5.0/intel/17.0.1:1;/glade/u/apps/ch/opt/ncarcompilers/0.5.0/intel/17.0.1/mpi:1;/glade/u/apps/ch/opt/esmf/7.1.0r-ncdfio/intel/17.0.1/bin/bing/Linux.intel.64.mpiuni.default:1;/glade/u/apps/opt/intel/2017u1/vtune_amplifier/bin64:1;/glade/u/apps/opt/intel/2017u1/inspector/bin64:1;/glade/u/apps/opt/intel/2017u1/advisor/bin64:1;/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux/bin/intel64:1;/glade/u/apps/opt/vncmgr:1;/glade/u/apps/opt/globus-utils:1;/glade/u/apps/ch/opt/usr/bin:1;/glade/work/marielj/conda-envs/cesm/bin:1;/glade/u/apps/ch/opt/lmod/8.7.13/bin:1;/usr/local/bin:1;/usr/bin:1;/bin:2;/usr/games:1;/opt/ibutils/bin:1;/opt/pbs/bin:1;/sbin:1;/glade/u/apps/opt/hpss/hpss-client.5.0.2.p5/bin:1;/glade/u/apps/ch/os/usr/bin:1;/glade/u/apps/ch/opt/hpe-cpe/22.02/bin:1
+LESS_ADVANCED_PREPROCESSOR=no
+OSTYPE=linux
+NCAR_GLOBUS_QUASAR=58bc6c98-8bba-11e9-b808-0a37f382de32
+NCAR_GLOBUS_AWS=3a1f3e98-1a93-11e9-9f9f-0a06afd4a22e
+CESMROOT=/glade/p/cesm
+_ModuleTable002_=ZSIsWyJ1c2VyTmFtZSJdPSJlc21mLTcuMS4wci1uY2RmaW8tdW5pLU8iLH0sZXNtZl9saWJzPXtbImZuIl09Ii9nbGFkZS91L2FwcHMvY2gvbW9kdWxlZmlsZXMvZGVmYXVsdC9pbnRlbC8xNy4wLjEvZXNtZl9saWJzLzcuMS4wci5sdWEiLFsiZnVsbE5hbWUiXT0iZXNtZl9saWJzLzcuMS4wciIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImVzbWZfbGlicyIsfSxpbnRlbD17WyJmbiJdPSIvZ2xhZGUvdS9hcHBzL2NoL21vZHVsZWZpbGVzL2RlZmF1bHQvY29tcGlsZXJzL2ludGVsLzE3LjAuMS5sdWEiLFsiZnVsbE5hbWUiXT0iaW50ZWwvMTcuMC4xIixbImxvYWRPcmRlciJdPTIscHJv
+PBS_O_HOST=r6i1n14.ib0.cheyenne.ucar.edu
+NCAR_WRAPPER_MPI=/glade/u/apps/ch/opt/ncarcompilers/0.5.0/intel/17.0.1/mpi
+FC=ifort
+WINDOWMANAGER=
+NETCDF=/glade/u/apps/ch/opt/netcdf/4.5.0/intel/17.0.1/
+G_FILENAME_ENCODING=@locale,UTF-8,ISO-8859-15,CP1252
+INSTALLPATH_ROOT=/glade/u/apps/ch/opt
+LESS=-M -I -R
+MACHTYPE=x86_64-suse-linux
+LOGNAME=marielj
+CONDA_PYTHON_EXE=/glade/u/apps/opt/conda/bin/python
+BATCHQUERY=undefined
+LMOD_SHELL_PRGM=bash
+CVS_RSH=ssh
+XDG_DATA_DIRS=/usr/share
+PBS_QUEUE=shareex
+NCAR_ROOT_INTEL=/glade/u/apps/opt/intel/2017u1
+COMPILER_VERSION=17.0.1
+MODULESHOME=/glade/u/apps/ch/opt/lmod/8.7.13/lmod/lmod
+PKG_CONFIG_PATH=/glade/u/apps/opt/intel/2017u1/mkl/bin/pkgconfig
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/glade/u/apps/opt/intel/2017u1/mkl/lib/intel64:1;/glade/u/apps/opt/intel/2017u1/tbb/lib/intel64/gcc4.7:1;/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux/lib/intel64:1;/glade/u/apps/ch/os/usr/lib64:1;/glade/u/apps/ch/os/usr/lib:1;/glade/u/apps/ch/os/lib64:1;/glade/u/apps/ch/os/lib:1
+COMPILER=intel
+PBS_O_MAIL=/var/spool/mail/marielj
+LMOD_SETTARG_FULL_SUPPORT=no
+LESSOPEN=lessopen.sh %s
+OMP_NUM_THREADS=1
+CONDA_DEFAULT_ENV=/glade/work/marielj/conda-envs/cesm
+INSPECTOR_2017_DIR=/glade/u/apps/opt/intel/2017u1/inspector
+__Init_Default_Modules=1
+MPIF90_F90=ifort
+LMOD_FAMILY_COMPILER=intel
+MPI_TYPE_DEPTH=16
+__LMOD_REF_COUNT_PKG_CONFIG_PATH=/glade/u/apps/opt/intel/2017u1/mkl/bin/pkgconfig:1
+CC=icc
+NCAR_GLOBUS_GLADE=d33b3614-6d04-11e5-ba46-22000b92c6ec
+LMOD_FAMILY_ESMF=esmf-7.1.0r-ncdfio-uni-O
+PBS_INCEPTION_IMAGE=login
+_ModuleTable006_=b2R1bGVmaWxlcy9kZWZhdWx0L2NvbXBpbGVyczovZ2xhZGUvdS9hcHBzL2NoL21vZHVsZWZpbGVzL2RlZmF1bHQvaWRlcCIsfQ==
+NCAR_LIBS_NETCDF=-Wl,-Bstatic -lnetcdff -lnetcdf -lhdf5hl_fortran -lhdf5_hl -lhdf5_fortran -lhdf5 -lsz -lz -Wl,-Bdynamic -lm -ldl
+__LMOD_REF_COUNT_MANPATH=/glade/u/apps/ch/opt/netcdf/4.5.0/intel/17.0.1/share/man:1;/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux/man/common:1;/usr/local/man:1;/usr/share/man:1;/opt/pbs/share/man:1
+LMOD_DIR=/glade/u/apps/ch/opt/lmod/8.7.13/lmod/lmod/libexec
+MP_COMPILER=intel
+PBS_O_SYSTEM=Linux
+LESSCLOSE=lessclose.sh %s %s
+NCAR_GLOBUS_STRATUS=b9cf5e6c-9245-11eb-b7a4-f57b2d55370d
+INTEL_COMPILER_BASE_PATH=/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux
+G_BROKEN_FILENAMES=1
+PBS_NODEFILE=/var/spool/pbs/aux/8527259.chadmin1.ib0.cheyenne.ucar.edu
+MPICC_CC=icc
+DASK_ROOT_CONFIG=/glade/u/apps/config/dask
+PBS_O_PATH=/glade/u/apps/ch/opt/netcdf/4.5.0/intel/17.0.1/bin:/glade/u/apps/ch/opt/ncarcompilers/0.5.0/intel/17.0.1:/glade/u/apps/ch/opt/ncarcompilers/0.5.0/intel/17.0.1/mpi:/glade/u/apps/ch/opt/esmf/7.1.0r-ncdfio/intel/17.0.1/bin/bing/Linux.intel.64.mpiuni.default:/glade/u/apps/opt/intel/2017u1/vtune_amplifier/bin64:/glade/u/apps/opt/intel/2017u1/inspector/bin64:/glade/u/apps/opt/intel/2017u1/advisor/bin64:/glade/u/apps/opt/intel/2017u1/compilers_and_libraries/linux/bin/intel64:/glade/u/apps/opt/vncmgr:/glade/u/apps/opt/globus-utils:/glade/u/apps/ch/opt/usr/bin:/glade/work/marielj/conda-envs/cesm/bin:/glade/u/apps/ch/opt/lmod/8.7.13/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/opt/ibutils/bin:/opt/pbs/bin:/sbin:/glade/u/apps/opt/hpss/hpss-client.5.0.2.p5/bin:/glade/u/apps/ch/os/usr/bin:/glade/u/apps/ch/opt/hpe-cpe/22.02/bin
+COLORTERM=1
+BASH_FUNC_module%%=() {  if [ -z "${LMOD_SH_DBG_ON+x}" ]; then
+ case "$-" in 
+ *v*x*)
+ __lmod_sh_dbg='vx'
+ ;;
+ *v*)
+ __lmod_sh_dbg='v'
+ ;;
+ *x*)
+ __lmod_sh_dbg='x'
+ ;;
+ esac;
+ fi;
+ if [ -n "${__lmod_sh_dbg:-}" ]; then
+ set +$__lmod_sh_dbg;
+ echo "Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output" 1>&2;
+ fi;
+ eval "$($LMOD_CMD $LMOD_SHELL_PRGM "$@")" && eval "$(${LMOD_SETTARG_CMD:-:} -s sh)";
+ __lmod_my_status=$?;
+ if [ -n "${__lmod_sh_dbg:-}" ]; then
+ echo "Shell debugging restarted" 1>&2;
+ set -$__lmod_sh_dbg;
+ fi;
+ unset __lmod_sh_dbg;
+ return $__lmod_my_status
+}
+_=/usr/bin/env

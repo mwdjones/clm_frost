@@ -1,0 +1,4 @@
+/glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_nospinup_BASEFLOW_v0/env_mach_specific.xml already exists, delete to replace
+submit_jobs case.run
+Submit job case.run
+/glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_nospinup_BASEFLOW_v1/env_mach_specific.xml already exists, delete to replace

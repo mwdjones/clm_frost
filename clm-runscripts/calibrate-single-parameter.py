@@ -48,7 +48,7 @@ COMPSET = '2000_DATM%1PT_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV'  #I1PtClm50SpGs
 for i in range(0, len(params[PARAM])):
 	CASE_NAME = 'mbp_tuning_nospinup_' + PARAM + '_v' + str(i) 
 	CASE_DIR = CASEROOT_DIR + '/' + CASE_NAME
-
+	
 	#print(CASE_NAME)
 	#print(params[PARAM][i])
 
@@ -58,12 +58,14 @@ for i in range(0, len(params[PARAM])):
 		#Create case
 		os.chdir(CIMEROOT_DIR + '/scripts')
 		subprocess.check_output(['./create_newcase',
-								'--case=%s' % CASE_DIR,
-								'--compset=%s' % COMPSET,
-								'--user-mods-dir=%s' % USER_MODS_DIR,
-								'--res=CLM_USRDAT', 
-								'--project=UMIN0008', 
-								'--run-unsupported'])
+						'--case=%s' % CASE_DIR,
+						'--compset=%s' % COMPSET,
+						'--user-mods-dir=%s' % USER_MODS_DIR,
+						'--res=CLM_USRDAT', 
+						'--project=UMIN0008', 
+						'--run-unsupported',
+						'--handle-preexisting-dirs=r'])
+        
 	else:
 		print('Case already exists.')
 
@@ -147,12 +149,15 @@ for i in range(0, len(params[PARAM])):
 	######
 
 	#Make Save Folder
-	os.mkdir('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)
+	#Check for directory
+	if(not os.path.exists('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)):
+		os.mkdir('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)
+	
 	SAVEPATH = '/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/' + CASE_NAME
 	SCRATCH_DIR = '/glade/scratch/marielj/' + CASE_NAME + '/run'
 	FILE_NAME = CASE_NAME + '*' + '.h1.' + '*' + '.nc'
 
-	#Check if history files have been saved, if not, save them
+	#Check if history files have been saved, if not, save them -- not finding files
 	os.chdir(SCRATCH_DIR)
 
 	files = glob.glob(FILE_NAME)
@@ -162,7 +167,6 @@ for i in range(0, len(params[PARAM])):
 			print(file + " did not exist. Saved.")
 		else:
 			print(file + " already exists.")
-
 
 
 
