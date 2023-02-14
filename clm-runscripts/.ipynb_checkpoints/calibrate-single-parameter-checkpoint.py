@@ -23,7 +23,7 @@ import xarray as xr
 ######
 
 #Dictionary containing params and their test values (multipliers)
-params = {'SLOPEBETA': [0, 1, 2, 3, 4], 
+params = {'SLOPEBETA': [2], 
 			'MU': [2, 1.5, 1.25, 1, 0.80, 0.66, 0.50],
 			'BASEFLOW': [10e-8, 10e-7, 10e-6, 10e-4, 10e-2, 1, 2]}
 
@@ -70,7 +70,7 @@ for i in range(0, len(params[PARAM])):
 		print('Case already exists.')
 
 	os.chdir(CASE_DIR)
-
+'''
 	######
 	# Set up case
 	######
@@ -124,24 +124,11 @@ for i in range(0, len(params[PARAM])):
 		f.write(" baseflow_scalar = " + str(params[PARAM][i]*1e-2))
 		
 	f.close()
-	if(PARAM == 'SLOPEBETA'):
-		#Copy user mods from directory to case directory -- DO NOT change the CLM_USER_MODS xml
-		USR_MODS_DIR='/glade/u/home/marielj/clm_frost/cesm_cases/calibration-mods/' + CASE_NAME
-		os.chdir(USR_MODS_DIR)
-		
-		shutil.copy2('initVerticalMod.F90', CASE_DIR + '/SourceMods/src.clm')
-				
-		#Check files made it
-		if(os.path.exists(CASE_DIR + '/SourceMods/src.clm/initVerticalMod.F90')):
-			print('Mods copied successfully.')
-		
-		os.chdir(CASE_DIR)
-
 	
 	######
 	# Run Simulation
 	######
-	
+
 	#Clear run directory
 	pipe = subprocess.Popen(['./case.build', '--clean-all'], stdout=subprocess.PIPE)
 
@@ -168,7 +155,7 @@ for i in range(0, len(params[PARAM])):
 	
 	SAVEPATH = '/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/' + CASE_NAME
 	SCRATCH_DIR = '/glade/scratch/marielj/' + CASE_NAME + '/run'
-	FILE_NAME = '*' + '.h1.' + '*'
+	FILE_NAME = CASE_NAME + '*' + '.h1.' + '*' + '.nc'
 
 	#Check if history files have been saved, if not, save them -- not finding files
 	os.chdir(SCRATCH_DIR)
@@ -180,5 +167,6 @@ for i in range(0, len(params[PARAM])):
 			print(file + " did not exist. Saved.")
 		else:
 			print(file + " already exists.")
-	
+'''
+
 
