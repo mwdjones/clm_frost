@@ -723,7 +723,7 @@ contains
 
        ! microtopographic parameter, units are meters (try smooth function of slope)
 
-       slopebeta = 5._r8
+       slopebeta = 100._r8
        slopemax = 0.4_r8
        slope0 = slopemax**(-1._r8/slopebeta)
        col%micro_sigma(c) = (col%topo_slope(c) + slope0)**(-slopebeta)
