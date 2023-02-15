@@ -1,7 +1,7 @@
 &modelio
   diri = "/glade/scratch/marielj/mbp_tuning_nospinup_QDRAIPERCHMAX_v2/bld/wav"
   diro = "/glade/scratch/marielj/mbp_tuning_nospinup_QDRAIPERCHMAX_v2/run"
-  logfile = "wav.log.8552670.chadmin1.ib0.cheyenne.ucar.edu.230214-160758"
+  logfile = "wav.log.8570375.chadmin1.ib0.cheyenne.ucar.edu.230215-100502"
 /
 &pio_inparm
   pio_netcdf_format = "64bit_offset"

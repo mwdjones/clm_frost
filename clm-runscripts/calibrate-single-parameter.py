@@ -24,10 +24,10 @@ import xarray as xr
 
 #Dictionary containing params and their test values (multipliers)
 params = {'SLOPEBETA': [0, 1, 2, 3, 4], 
-			'QDRAIPERCHMAX': [1e-9, 1e-7, 1e-5, 1e-3, 1e-1],
+			'QDRAIPERCHMAX': [10e-8, 10e-7, 10e-6, 10e-4, 10e-2, 1, 10],
 			'BASEFLOW': [10e-8, 10e-7, 10e-6, 10e-4, 10e-2, 1, 2]}
 
-PARAM = 'SLOPEBETA' #One of 'slopebeta', 'qdraiperchmax', 'baseflow', 'control'
+PARAM = 'QDRAIPERCHMAX' #One of 'slopebeta', 'qdraiperchmax', 'baseflow', 'control'
 
 ######
 # Case Setup
@@ -177,9 +177,10 @@ for i in range(0, len(params[PARAM])):
 	#Check for directory
 	if(not os.path.exists('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)):
 		os.mkdir('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)
+		print('New save directory for: ' + CASE_NAME)
 	
 	SAVEPATH = '/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/' + CASE_NAME
-	SCRATCH_DIR = '/glade/scratch/marielj/' + CASE_NAME + '/run'
+	SCRATCH_DIR = '/glade/scratch/marielj/' + CASE_NAME + '/run/'
 	FILE_NAME = '*' + '.h1.' + '*'
 
 	#Check if history files have been saved, if not, save them -- not finding files

@@ -1054,7 +1054,7 @@ contains
           c = filter_hydrologyc(fc)
 
           !  specify maximum drainage rate
-          q_perch_max = 1.e-5_r8 * sin(col%topo_slope(c) * (rpi/180._r8))
+          q_perch_max = 1.e-7_r8 * sin(col%topo_slope(c) * (rpi/180._r8))
 
           ! if layer containing water table is frozen, compute the following:
           !     frost table, perched water table, and drainage from perched saturated layer
@@ -1749,7 +1749,7 @@ contains
           if ((frost_table(c) > zwt_perched(c)) .and. origflag == 0) then
 
              !  specify maximum drainage rate
-             q_perch_max = 1.e-1_r8 * sin(col%topo_slope(c) * (rpi/180._r8))
+             q_perch_max = 1.e-5_r8 * sin(col%topo_slope(c) * (rpi/180._r8))
              
              ! calculate frost table and perched water table locations
              do k=1, nlevsoi
