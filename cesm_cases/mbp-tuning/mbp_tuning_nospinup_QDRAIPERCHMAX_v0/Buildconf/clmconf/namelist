@@ -1,0 +1,11 @@
+&comp_inparm 
+
+ fsurdat = '/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP/surfdata_1x1pt_US-MBP_hist_16pfts_Irrig_CMIP6_simyr2000_c230123.nc'
+
+ hist_nhtfrq = 0,-24
+
+ hist_mfilt  = 1200,365
+
+ hist_fincl2 = 'RAIN', 'H2OSNO', 'QSOIL', 'QVEGT', 'QSNOMELT', 'QRUNOFF', 'ZWT', 'ZWT_PERCH', 'SNOW', 'TSA', 'SOILICE', 'QINFL'
+
+/ 

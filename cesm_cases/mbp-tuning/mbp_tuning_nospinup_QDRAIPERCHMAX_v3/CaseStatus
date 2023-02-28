@@ -1,0 +1,202 @@
+2023-02-14 16:08:04: xmlchange success <command> ./xmlchange --force CLM_USRDAT_NAME=1x1pt_US-MBP  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:05: xmlchange success <command> ./xmlchange --force MPILIB=mpi-serial  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:05: xmlchange success <command> ./xmlchange --force ATM_DOMAIN_PATH=/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:05: xmlchange success <command> ./xmlchange --force LND_DOMAIN_PATH=/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:06: xmlchange success <command> ./xmlchange --force ATM_DOMAIN_FILE=domain.lnd.1x1pt_US-MBP_navy.230123.nc  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:06: xmlchange success <command> ./xmlchange --force LND_DOMAIN_FILE=domain.lnd.1x1pt_US-MBP_navy.230123.nc  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:06: xmlchange success <command> ./xmlchange --force --append CLM_BLDNML_OPTS=-mask navy -no-crop  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:07: xmlchange success <command> ./xmlchange --force CALENDAR=GREGORIAN  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:07: xmlchange success <command> ./xmlchange --force DOUT_S=FALSE  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:07: xmlchange success <command> ./xmlchange --force ATM_NCPL=48  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:08: xmlchange success <command> ./xmlchange --force DIN_LOC_ROOT=/glade/p/cesmdata/cseg/inputdata  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:08: xmlchange success <command> ./xmlchange --force DIN_LOC_ROOT_CLMFORC=/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:08: case.setup starting 
+ ---------------------------------------------------
+2023-02-14 16:08:09: case.setup success 
+ ---------------------------------------------------
+2023-02-14 16:08:10: xmlchange success <command> ./xmlchange DATM_MODE=CLM1PT  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:10: xmlchange success <command> ./xmlchange CLM_FORCE_COLDSTART=off  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:10: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:10: xmlchange success <command> ./xmlchange CALENDAR=NO_LEAP  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:11: xmlchange success <command> ./xmlchange RUN_STARTDATE=2011-01-01  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:11: xmlchange success <command> ./xmlchange DATM_CLMNCEP_YR_ALIGN=2011  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:11: xmlchange success <command> ./xmlchange DATM_CLMNCEP_YR_START=2011  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:12: xmlchange success <command> ./xmlchange DATM_CLMNCEP_YR_END=2017  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:12: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:12: xmlchange success <command> ./xmlchange STOP_N=7  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:13: xmlchange success <command> ./xmlchange DIN_LOC_ROOT_CLMFORC=/glade/u/home/marielj/inputdata/atm/datm7/CLM1PT_data  </command>
+ ---------------------------------------------------
+2023-02-14 16:08:13: build.clean starting 
+ ---------------------------------------------------
+2023-02-14 16:08:13: build.clean success 
+ ---------------------------------------------------
+2023-02-14 16:08:24: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CAM.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Checking status of externals: cam, chem_proc, carma, clubb, cosp2, cice, cime, cism, source_cism, clm, fates, ptclm, mosart, pop, cvmix, marbl, rtm, ww3, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+ M  ./components/clm
+        modified sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+ M  ./components/clm/tools/PTCLM
+        modified sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-02-14 16:17:58: case.build success 
+ ---------------------------------------------------
+2023-02-14 16:18:25: case.submit starting 
+ ---------------------------------------------------
+2023-02-14 16:18:29: case.submit success case.run:8552744.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-02-14 16:18:38: case.run starting 
+ ---------------------------------------------------
+2023-02-14 16:18:42: model execution starting 
+ ---------------------------------------------------
+2023-02-14 16:25:07: model execution success 
+ ---------------------------------------------------
+2023-02-14 16:25:07: case.run success 
+ ---------------------------------------------------
+2023-02-15 10:05:11: case.setup starting 
+ ---------------------------------------------------
+2023-02-15 10:05:12: case.setup success 
+ ---------------------------------------------------
+2023-02-15 10:05:12: xmlchange success <command> ./xmlchange DATM_MODE=CLM1PT  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:12: xmlchange success <command> ./xmlchange CLM_FORCE_COLDSTART=off  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:13: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:13: xmlchange success <command> ./xmlchange CALENDAR=NO_LEAP  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:13: xmlchange success <command> ./xmlchange RUN_STARTDATE=2011-01-01  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:13: xmlchange success <command> ./xmlchange DATM_CLMNCEP_YR_ALIGN=2011  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:14: xmlchange success <command> ./xmlchange DATM_CLMNCEP_YR_START=2011  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:14: xmlchange success <command> ./xmlchange DATM_CLMNCEP_YR_END=2017  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:14: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:15: xmlchange success <command> ./xmlchange STOP_N=7  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:15: xmlchange success <command> ./xmlchange DIN_LOC_ROOT_CLMFORC=/glade/u/home/marielj/inputdata/atm/datm7/CLM1PT_data  </command>
+ ---------------------------------------------------
+2023-02-15 10:05:15: build.clean starting 
+ ---------------------------------------------------
+2023-02-15 10:05:17: build.clean success 
+ ---------------------------------------------------
+2023-02-15 10:05:20: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CAM.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Checking status of externals: cam, chem_proc, carma, clubb, cosp2, cice, cime, cism, source_cism, clm, fates, ptclm, mosart, pop, cvmix, marbl, rtm, ww3, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+ M  ./components/clm
+        modified sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+ M  ./components/clm/tools/PTCLM
+        modified sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-02-15 10:14:57: case.build success 
+ ---------------------------------------------------
+2023-02-15 10:15:30: case.submit starting 
+ ---------------------------------------------------
+2023-02-15 10:15:36: case.submit success case.run:8570451.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-02-15 10:15:41: case.run starting 
+ ---------------------------------------------------
+2023-02-15 10:15:42: model execution starting 
+ ---------------------------------------------------
+2023-02-15 10:20:03: model execution success 
+ ---------------------------------------------------
+2023-02-15 10:20:03: case.run success 
+ ---------------------------------------------------
