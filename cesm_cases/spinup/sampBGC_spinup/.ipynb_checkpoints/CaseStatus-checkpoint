@@ -1,0 +1,101 @@
+2023-03-01 10:30:22: xmlchange success <command> ./xmlchange CLM_ACCELERATED_SPINUP=on  </command>
+ ---------------------------------------------------
+2023-03-01 10:30:52: xmlchange success <command> ./xmlchange RESUBMIT=3,STOP_N=50,STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2023-03-01 10:31:10: case.setup starting 
+ ---------------------------------------------------
+2023-03-01 10:31:10: case.setup success 
+ ---------------------------------------------------
+2023-03-01 10:31:49: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CAM.cfg
+Checking status of externals: clm, fates, ptclm, mosart, ww3, cime, cice, pop, cvmix, marbl, cism, source_cism, rtm, cam, clubb, carma, cosp2, chem_proc, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+ M  ./components/clm
+        modified sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+ M  ./components/clm/tools/PTCLM
+        modified sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-03-01 10:40:15: case.build success 
+ ---------------------------------------------------
+2023-03-01 10:40:54: case.submit starting 
+ ---------------------------------------------------
+2023-03-01 10:40:57: case.submit success case.run:8769009.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8769010.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-03-01 10:41:01: case.run starting 
+ ---------------------------------------------------
+2023-03-01 10:41:03: model execution starting 
+ ---------------------------------------------------
+2023-03-01 12:57:54: model execution success 
+ ---------------------------------------------------
+2023-03-01 12:57:54: case.run success 
+ ---------------------------------------------------
+2023-03-01 12:58:09: st_archive starting 
+ ---------------------------------------------------
+2023-03-01 12:58:12: st_archive success 
+ ---------------------------------------------------
+2023-03-01 12:58:12: case.submit starting 
+ ---------------------------------------------------
+2023-03-01 12:58:13: case.submit success case.run:8770225.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8770226.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-03-01 13:15:48: case.run starting 
+ ---------------------------------------------------
+2023-03-01 13:15:51: model execution starting 
+ ---------------------------------------------------
+2023-03-01 15:30:22: model execution success 
+ ---------------------------------------------------
+2023-03-01 15:30:22: case.run success 
+ ---------------------------------------------------
+2023-03-01 15:30:36: st_archive starting 
+ ---------------------------------------------------
+2023-03-01 15:30:39: st_archive success 
+ ---------------------------------------------------
+2023-03-01 15:30:39: case.submit starting 
+ ---------------------------------------------------
+2023-03-01 15:30:40: case.submit success case.run:8771535.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8771536.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-03-01 15:30:49: case.run starting 
+ ---------------------------------------------------
+2023-03-01 15:30:51: model execution starting 
+ ---------------------------------------------------
+2023-03-01 15:30:52: model execution success 
+ ---------------------------------------------------
+2023-03-01 15:30:52: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 1476  omplace -tm open64  /glade/scratch/marielj/sampBGC_spinup/bld/cesm.exe  >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/marielj/sampBGC_spinup/run/cesm.log.8771535.chadmin1.ib0.cheyenne.ucar.edu.230301-153049
+ ---------------------------------------------------

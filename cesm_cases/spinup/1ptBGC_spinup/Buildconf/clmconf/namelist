@@ -1,0 +1,11 @@
+&comp_inparm 
+
+
+
+ fsurdat = '/glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic/surfdata_1x1pt_US-MBP_hist_16pfts_Irrig_CMIP6_simyr2000_c230220_v4.nc'
+
+ hist_nhtfrq = 0
+
+ hist_mfilt  = 1200
+
+/ 
