@@ -25,9 +25,10 @@ import xarray as xr
 #Dictionary containing params and their test values (multipliers)
 params = {'SLOPEBETA': [0, 1, 2, 3, 4], 
 			'QDRAIPERCHMAX': [10e-8, 10e-7, 10e-6, 10e-4, 10e-2, 1, 10],
-			'BASEFLOW': [10e-8, 10e-7, 10e-6, 10e-4, 10e-2, 1, 2]}
+			'BASEFLOW': [10e-8, 10e-7, 10e-6, 10e-4, 10e-2, 1, 2], 
+			'CONTROL':[0]}
 
-PARAM = 'QDRAIPERCHMAX' #One of 'slopebeta', 'qdraiperchmax', 'baseflow', 'control'
+PARAM = 'CONTROL' #One of 'slopebeta', 'qdraiperchmax', 'baseflow', 'control'
 
 ######
 # Case Setup
@@ -42,11 +43,11 @@ CASEROOT_DIR = '/glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning'
 #User Mods Dir - Where the surface and domain files are
 USER_MODS_DIR = '/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP'
 #Forcing Data Root - Where the atmospheric forcing data is
-CLMFORC_DIR = '/glade/u/home/marielj/inputdata/atm/datm7/CLM1PT_data'
+CLMFORC_DIR = '/glade/work/marielj/inputdata/atm/datm7/CLM1PT_data'
 COMPSET = '2000_DATM%1PT_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV'  #I1PtClm50SpGs
 
 for i in range(0, len(params[PARAM])):
-	CASE_NAME = 'mbp_tuning_nospinup_' + PARAM + '_v' + str(i) 
+	CASE_NAME = 'mbp_tuning_spinup_' + PARAM + '_v' + str(i) 
 	CASE_DIR = CASEROOT_DIR + '/' + CASE_NAME
 	
 	#print(CASE_NAME)
@@ -88,6 +89,7 @@ for i in range(0, len(params[PARAM])):
 	subprocess.check_output(['./xmlchange', 'DATM_MODE=CLM1PT'])
 	subprocess.check_output(['./xmlchange', 'CLM_FORCE_COLDSTART=off'])
 	subprocess.check_output(['./xmlchange', 'CONTINUE_RUN=FALSE'])
+	subprocess.check_output(['./xmlchange', 'CLM_USRDAT_NAME=1x1pt_US-MBP'])
 
 	#Calendar
 	subprocess.check_output(['./xmlchange', 'CALENDAR=NO_LEAP'])
@@ -106,14 +108,22 @@ for i in range(0, len(params[PARAM])):
 
 	#Set Forcing data directory
 	subprocess.check_output(['./xmlchange', 'DIN_LOC_ROOT_CLMFORC=%s' % CLMFORC_DIR])
+    
+    #Change domain paths
+	subprocess.check_output(['./xmlchange', 'ATM_DOMAIN_PATH=/glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic'])
+	subprocess.check_output(['./xmlchange', 'LND_DOMAIN_PATH=/glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic'])
+	subprocess.check_output(['./xmlchange', 'ATM_DOMAIN_FILE=domain.lnd.1x1pt_US-MBP_navy.230220.nc'])
+	subprocess.check_output(['./xmlchange', 'LND_DOMAIN_FILE=domain.lnd.1x1pt_US-MBP_navy.230220.nc'])
+    
 	
 	#History files
 	file_name = 'user_nl_clm'
 	f = open(file_name, 'w')
-	f.write(" fsurdat = '/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP/surfdata_1x1pt_US-MBP_hist_16pfts_Irrig_CMIP6_simyr2000_c230123.nc'\n")
+	f.write(" fsurdat = '/glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic/surfdata_1x1pt_US-MBP_hist_16pfts_Irrig_CMIP6_simyr2000_c230220_v4.nc'\n")
+	f.write(" finidat = '/glade/u/home/marielj/clm_frost/cesm_cases/spinup/finaldata/1ptBGC_spinup.clm2.r.0201-01-01-00000.nc'\n")
 	f.write(" hist_nhtfrq = 0,-24\n")
 	f.write(" hist_mfilt  = 1200,365\n")
-	f.write(" hist_fincl2 = 'RAIN', 'H2OSNO', 'QSOIL', 'QVEGT', 'QSNOMELT', 'QRUNOFF', 'ZWT', 'ZWT_PERCH', 'SNOW', 'TSA', 'SOILICE', 'QINFL'\n")
+	f.write(" hist_fincl2 = 'RAIN', 'H2OSNO', 'QSOIL', 'QVEGT', 'QSNOMELT', 'QRUNOFF', 'ZWT', 'ZWT_PERCH', 'SNOW', 'TSA', 'SOILICE', 'QINFL', 'QOVER', 'H2OSOI', 'TSOI'\n")
 
 	######
 	# Make Parameter Change
@@ -173,6 +183,7 @@ for i in range(0, len(params[PARAM])):
 	# Store Output
 	######
 
+	'''
 	#Make Save Folder
 	#Check for directory
 	if(not os.path.exists('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)):
@@ -193,5 +204,5 @@ for i in range(0, len(params[PARAM])):
 			print(file + " did not exist. Saved.")
 		else:
 			print(file + " already exists.")
-	
+	'''
 
