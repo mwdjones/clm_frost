@@ -1,0 +1,42 @@
+2023-03-06 15:37:05: ./create_newcase --case=/glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_FOVER_v1 --compset=2000_DATM%1PT_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV --user-mods-dir=/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP --res=CLM_USRDAT --project=UMIN0008 --run-unsupported --handle-preexisting-dirs=r
+ ---------------------------------------------------
+2023-03-06 15:37:05: Compset longname is 2000_DATM%1PT_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV
+ ---------------------------------------------------
+2023-03-06 15:37:05: Compset specification file is /glade/u/home/marielj/cesm2.1.3/components/clm//cime_config/config_compsets.xml
+ ---------------------------------------------------
+2023-03-06 15:37:05: Pes     specification file is /glade/u/home/marielj/cesm2.1.3/components/clm//cime_config/config_pes.xml
+ ---------------------------------------------------
+2023-03-06 15:37:05: Forcing is 1972-2004
+ ---------------------------------------------------
+2023-03-06 15:37:05: Using None coupler instances
+ ---------------------------------------------------
+2023-03-06 15:37:05: Component ATM is  Data driven ATM single point tower site data set 
+ ---------------------------------------------------
+2023-03-06 15:37:05: ATM_GRID is CLM_USRDAT
+ ---------------------------------------------------
+2023-03-06 15:37:05: Component LND is clm5.0:Satellite phenology:
+ ---------------------------------------------------
+2023-03-06 15:37:05: LND_GRID is CLM_USRDAT
+ ---------------------------------------------------
+2023-03-06 15:37:05: Component ICE is Stub ice component
+ ---------------------------------------------------
+2023-03-06 15:37:05: ICE_GRID is null
+ ---------------------------------------------------
+2023-03-06 15:37:05: Component OCN is Stub ocn component
+ ---------------------------------------------------
+2023-03-06 15:37:05: OCN_GRID is null
+ ---------------------------------------------------
+2023-03-06 15:37:05: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+ ---------------------------------------------------
+2023-03-06 15:37:05: ROF_GRID is null
+ ---------------------------------------------------
+2023-03-06 15:37:05: Component GLC is Stub glacier (land ice) component
+ ---------------------------------------------------
+2023-03-06 15:37:05: GLC_GRID is null
+ ---------------------------------------------------
+2023-03-06 15:37:05: Component WAV is Stub wave component
+ ---------------------------------------------------
+2023-03-06 15:37:05: WAV_GRID is null
+ ---------------------------------------------------
+2023-03-06 15:37:05: ESP_GRID is None
+ ---------------------------------------------------

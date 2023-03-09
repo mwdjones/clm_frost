@@ -23,12 +23,14 @@ import xarray as xr
 ######
 
 #Dictionary containing params and their test values (multipliers)
-params = {'SLOPEBETA': [0, 1, 2, 3, 4], 
+params = {'SLOPEBETA': [-100, -50, -3, 1, 10], 
 			'QDRAIPERCHMAX': [10e-8, 10e-7, 10e-6, 10e-4, 10e-2, 1, 10],
 			'BASEFLOW': [10e-8, 10e-7, 10e-6, 10e-4, 10e-2, 1, 2], 
+			'FOVER': [0.1, 0.25, 0.5, 0.75, 1, 3, 5], 
+			'FMAX' : [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
 			'CONTROL':[0]}
 
-PARAM = 'CONTROL' #One of 'slopebeta', 'qdraiperchmax', 'baseflow', 'control'
+PARAM = 'FOVER' #One of 'slopebeta', 'qdraiperchmax', 'baseflow', 'control', 'fover', 'fmax'
 
 ######
 # Case Setup
@@ -119,8 +121,8 @@ for i in range(0, len(params[PARAM])):
 	#History files
 	file_name = 'user_nl_clm'
 	f = open(file_name, 'w')
-	f.write(" fsurdat = '/glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic/surfdata_1x1pt_US-MBP_hist_16pfts_Irrig_CMIP6_simyr2000_c230220_v4.nc'\n")
-	f.write(" finidat = '/glade/u/home/marielj/clm_frost/cesm_cases/spinup/finaldata/1ptBGC_spinup.clm2.r.0201-01-01-00000.nc'\n")
+	f.write(" fsurdat = '/glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic/surfdata_1x1pt_US-MBP_hist_16pfts_Irrig_CMIP6_simyr2000_c230220_v4.nc'\n") #change to v4 or v3 depending on mixed PFTs or arctic grass respectively
+	f.write(" finidat = '/glade/u/home/marielj/clm_frost/cesm_cases/spinup/finaldata/1ptBGC_spinup.clm2.r.0201-01-01-00000.nc'\n") #Also change to the matching restart file
 	f.write(" hist_nhtfrq = 0,-24\n")
 	f.write(" hist_mfilt  = 1200,365\n")
 	f.write(" hist_fincl2 = 'RAIN', 'H2OSNO', 'QSOIL', 'QVEGT', 'QSNOMELT', 'QRUNOFF', 'ZWT', 'ZWT_PERCH', 'SNOW', 'TSA', 'SOILICE', 'QINFL', 'QOVER', 'H2OSOI', 'TSOI'\n")
@@ -133,7 +135,12 @@ for i in range(0, len(params[PARAM])):
 		#Can change this value easily in the namelist files
 		f.write(" baseflow_scalar = " + str(params[PARAM][i]*1e-2))
 		
+	if(PARAM == 'FMAX'):
+		#Can change this value easily in the namelist files
+		f.write(" soil_fmax = " + str(params[PARAM][i]))
+		
 	f.close()
+    
 	if(PARAM == 'SLOPEBETA'):
 		#Copy user mods from directory to case directory -- DO NOT change the CLM_USER_MODS xml
 		USR_MODS_DIR='/glade/u/home/marielj/clm_frost/cesm_cases/calibration-mods/' + CASE_NAME
@@ -146,7 +153,8 @@ for i in range(0, len(params[PARAM])):
 			print('Mods copied successfully.')
 		
 		os.chdir(CASE_DIR)
-	if(PARAM == 'QDRAIPERCHMAX'):
+        
+	if((PARAM == 'QDRAIPERCHMAX') | (PARAM == 'FOVER')):
 		#Copy user mods from directory to case directory -- DO NOT change the CLM_USER_MODS xml
 		USR_MODS_DIR='/glade/u/home/marielj/clm_frost/cesm_cases/calibration-mods/' + CASE_NAME
 		os.chdir(USR_MODS_DIR)
@@ -183,15 +191,16 @@ for i in range(0, len(params[PARAM])):
 	# Store Output
 	######
 
-	'''
+	
 	#Make Save Folder
 	#Check for directory
 	if(not os.path.exists('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)):
 		os.mkdir('/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/%s' % CASE_NAME)
 		print('New save directory for: ' + CASE_NAME)
 	
+	'''
 	SAVEPATH = '/glade/u/home/marielj/clm_frost/cesm_cases/stored-data/' + CASE_NAME
-	SCRATCH_DIR = '/glade/scratch/marielj/' + CASE_NAME + '/run/'
+	SCRATCH_DIR = '/glade/scratch/marielj/archive/' + CASE_NAME + '/lnd/hist/'
 	FILE_NAME = '*' + '.h1.' + '*'
 
 	#Check if history files have been saved, if not, save them -- not finding files

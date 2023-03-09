@@ -1,0 +1,12 @@
+Case already exists.
+b"Setting resource.RLIMIT_STACK to -1 from (-1, -1)\nMachine/Decomp/Pes configuration has already been done ...skipping\nIf an old case build already exists, might want to run 'case.build --clean' before building\nYou can now run './preview_run' to get more info on how your case will be run\n"
+Setup complete
+Traceback (most recent call last):
+  File "/glade/u/home/marielj/clm_frost/clm-runscripts/calibrate-single-parameter.py", line 149, in <module>
+    shutil.copy2('*', CASE_DIR + '/SourceMods/src.clm')
+  File "/glade/work/marielj/conda-envs/cesm/lib/python3.11/shutil.py", line 436, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/glade/work/marielj/conda-envs/cesm/lib/python3.11/shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '*'

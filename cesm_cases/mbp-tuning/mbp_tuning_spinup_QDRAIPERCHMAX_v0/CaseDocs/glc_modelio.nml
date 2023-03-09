@@ -1,0 +1,13 @@
+&modelio
+  diri = "/glade/scratch/marielj/mbp_tuning_spinup_QDRAIPERCHMAX_v0/bld/glc"
+  diro = "/glade/scratch/marielj/mbp_tuning_spinup_QDRAIPERCHMAX_v0/run"
+  logfile = "glc.log.8833731.chadmin1.ib0.cheyenne.ucar.edu.230307-090416"
+/
+&pio_inparm
+  pio_netcdf_format = "64bit_offset"
+  pio_numiotasks = -99
+  pio_rearranger = 1
+  pio_root = 1
+  pio_stride = 36
+  pio_typename = "netcdf"
+/

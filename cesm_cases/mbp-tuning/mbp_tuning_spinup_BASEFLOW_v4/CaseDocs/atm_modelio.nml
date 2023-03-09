@@ -1,0 +1,13 @@
+&modelio
+  diri = "/glade/scratch/marielj/mbp_tuning_spinup_BASEFLOW_v4/bld/atm"
+  diro = "/glade/scratch/marielj/mbp_tuning_spinup_BASEFLOW_v4/run"
+  logfile = "atm.log.8791662.chadmin1.ib0.cheyenne.ucar.edu.230302-214835"
+/
+&pio_inparm
+  pio_netcdf_format = "64bit_offset"
+  pio_numiotasks = -99
+  pio_rearranger = 1
+  pio_root = 1
+  pio_stride = 36
+  pio_typename = "netcdf"
+/

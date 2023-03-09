@@ -1,0 +1,42 @@
+Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+st_archive starting
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/cpl.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/logs/cpl.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/atm.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/logs/atm.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/lnd.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/logs/lnd.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/cesm.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/logs/cesm.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/rof.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/logs/rof.log.8828570.chadmin1.ib0.cheyenne.ucar.edu.230306-160649.gz
+-------------------------------------------
+Archiving restarts for date date(2018, 1, 1, 0, 0, 0)
+-------------------------------------------
+Archiving restarts for datm (atm)
+Archiving restarts for clm (lnd)
+copying file /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.r.2018-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/rest/2018-01-01-00000/mbp_tuning_spinup_grass_FOVER_v3.clm2.r.2018-01-01-00000.nc
+Copying /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h0.2011-02-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/rest/2018-01-01-00000/mbp_tuning_spinup_grass_FOVER_v3.clm2.h0.2011-02-01-00000.nc
+Copying /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2018-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/rest/2018-01-01-00000/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2018-01-01-00000.nc
+ WARNING: ncdump -v locfnh /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.rh1.2018-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.rh1.2018-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/rest/2018-01-01-00000/mbp_tuning_spinup_grass_FOVER_v3.clm2.rh1.2018-01-01-00000.nc
+ WARNING: ncdump -v locfnh /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.rh0.2018-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.rh0.2018-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/rest/2018-01-01-00000/mbp_tuning_spinup_grass_FOVER_v3.clm2.rh0.2018-01-01-00000.nc
+Archiving restarts for mosart (rof)
+Archiving restarts for drv (cpl)
+copying file /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.cpl.r.2018-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/rest/2018-01-01-00000/mbp_tuning_spinup_grass_FOVER_v3.cpl.r.2018-01-01-00000.nc
+Archiving restarts for dart (esp)
+Archiving history files for datm (atm)
+Archiving history files for clm (lnd)
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2011-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/lnd/hist/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2011-01-01-00000.nc 
+copying /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2018-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/lnd/hist/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2018-01-01-00000.nc 
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2013-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/lnd/hist/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2013-01-01-00000.nc 
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2017-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/lnd/hist/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2017-01-01-00000.nc 
+copying /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h0.2011-02-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/lnd/hist/mbp_tuning_spinup_grass_FOVER_v3.clm2.h0.2011-02-01-00000.nc 
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2016-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/lnd/hist/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2016-01-01-00000.nc 
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2015-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/lnd/hist/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2015-01-01-00000.nc 
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2012-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/lnd/hist/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2012-01-01-00000.nc 
+moving /glade/scratch/marielj/mbp_tuning_spinup_grass_FOVER_v3/run/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2014-01-01-00000.nc to /glade/scratch/marielj/archive/mbp_tuning_spinup_grass_FOVER_v3/lnd/hist/mbp_tuning_spinup_grass_FOVER_v3.clm2.h1.2014-01-01-00000.nc 
+Archiving history files for mosart (rof)
+Archiving history files for drv (cpl)
+Archiving history files for dart (esp)
+st_archive completed
