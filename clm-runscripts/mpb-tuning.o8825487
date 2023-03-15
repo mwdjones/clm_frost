@@ -1,8 +1,0 @@
-/glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_SLOPEBETA_v0/env_mach_specific.xml already exists, delete to replace
-Case does not exist. Creating new case.
-b"Setting resource.RLIMIT_STACK to -1 from (-1, -1)\njob is case.run USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S\nCreating batch scripts\nWriting case.run script from input template /glade/u/home/marielj/cesm2.1.3/cime/config/cesm/machines/template.case.run\nCreating file .case.run\nWriting case.st_archive script from input template /glade/u/home/marielj/cesm2.1.3/cime/config/cesm/machines/template.st_archive\nCreating file case.st_archive\nCreating user_nl_xxx files for components and cpl\nIf an old case build already exists, might want to run 'case.build --clean' before building\nYou can now run './preview_run' to get more info on how your case will be run\n"
-Setup complete
-Traceback (most recent call last):
-  File "/glade/u/home/marielj/clm_frost/clm-runscripts/calibrate-single-parameter.py", line 140, in <module>
-    os.chdir(USR_MODS_DIR)
-FileNotFoundError: [Errno 2] No such file or directory: '/glade/u/home/marielj/clm_frost/cesm_cases/calibration-mods/mbp_tuning_spinup_grass_SLOPEBETA_v0'

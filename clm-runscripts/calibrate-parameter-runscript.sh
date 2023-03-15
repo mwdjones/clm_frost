@@ -1,8 +1,8 @@
 #!/bin/bash
 #PBS -N mpb-tuning
 #PBS -A UMIN0008
-#PBS -l walltime=03:00:00
-#PBS -q economy
+#PBS -l walltime=06:00:00
+#PBS -q regular
 #PBS -j oe
 #PBS -k eod
 #PBS -l select=3:ncpus=1:mpiprocs=1:mem=109GB

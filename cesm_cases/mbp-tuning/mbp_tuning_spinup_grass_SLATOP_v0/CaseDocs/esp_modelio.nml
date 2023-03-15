@@ -1,0 +1,13 @@
+&modelio
+  diri = "/glade/scratch/marielj/mbp_tuning_spinup_grass_SLATOP_v0/bld/esp"
+  diro = "/glade/scratch/marielj/mbp_tuning_spinup_grass_SLATOP_v0/run"
+  logfile = "esp.log.8893109.chadmin1.ib0.cheyenne.ucar.edu.230313-214612"
+/
+&pio_inparm
+  pio_netcdf_format = ""
+  pio_numiotasks = -99
+  pio_rearranger = -99
+  pio_root = -99
+  pio_stride = -99
+  pio_typename = "nothing"
+/
