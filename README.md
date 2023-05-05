@@ -1,8 +1,8 @@
-# Winter Climate, Soil Frost, and Hydrologic Connectivity
+## Soil frost and snowmelt partitioning in headwater catchments
 
-### Abstract
+**Abstract**
 
-### Contents
+Seasonally frozen ground (SFG) covers almost 25% of the Earth’s surface, with receding permafrost covering another 25%. While it is well known that soil frost influences watershed hydrology, the coupled interaction of SFG with temperature and snowpack make understanding its hydrologic impacts particularly difficult. In cold climates, snowpack insulates the soil layers, making soil frost less likely to form, but low winter temperatures counteract this insulation effect and contribute to deeper soil frost. Furthermore, both snow depth and soil frost depth influence the amount of spring runoff. For example, the time it takes for the frost layer to disappear depends on the rate of snowmelt because soil frost does not start melting until the snow layer is gone. These complex interactions amongs snowmelt, frost content, and infiltration will then affect the amount of water available for evapotranspiration (ET) or recharge over the growing season. 
 
-### Ongoing
+To untangle these complex interactions, we conduct a sensitivity analysis with the Community Land Model (CLM), the land surface component of the Community Earth System Model (CESM), to determine the influence of snowfall, winter and spring temperatures, and fall soil moisture on frost formation and hydrological partitioning (i.e., the division of snowmelt to ET or recharge). This sensitivity analysis is done by varying those climate parameters to examine both their independent and compound effects on the partitioning of snowmelt over the spring season. Preliminary results show that an increased soil frost depth due to smaller snowpack reduces total spring recharge. However, the reduction in recharge is not due to a reduction in infiltration (and increase in surface runoff), but instead to a shift in water allocation from recharge towards spring ET. This shift in allocation is likely because, in the presence of a smaller snowpack, surficial SFG melts out earlier, leading to an earlier initiation of ET and a larger amount of total ET over the spring season. 
 
