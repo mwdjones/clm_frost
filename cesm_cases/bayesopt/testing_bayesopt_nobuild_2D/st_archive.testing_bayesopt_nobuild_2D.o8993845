@@ -1,0 +1,36 @@
+Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+st_archive starting
+moving /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/cesm.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/logs/cesm.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz
+moving /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/lnd.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/logs/lnd.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz
+moving /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/rof.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/logs/rof.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz
+moving /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/cpl.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/logs/cpl.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz
+moving /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/atm.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/logs/atm.log.8993844.chadmin1.ib0.cheyenne.ucar.edu.230323-112520.gz
+-------------------------------------------
+Archiving restarts for date date(2012, 1, 1, 0, 0, 0)
+-------------------------------------------
+Archiving restarts for datm (atm)
+Archiving restarts for clm (lnd)
+copying file /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.r.2012-01-01-00000.nc to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/rest/2012-01-01-00000/testing_bayesopt_nobuild_2D.clm2.r.2012-01-01-00000.nc
+Copying /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.h1.2012-01-01-00000.nc to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/rest/2012-01-01-00000/testing_bayesopt_nobuild_2D.clm2.h1.2012-01-01-00000.nc
+Copying /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.h0.2011-02-01-00000.nc to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/rest/2012-01-01-00000/testing_bayesopt_nobuild_2D.clm2.h0.2011-02-01-00000.nc
+ WARNING: ncdump -v locfnh /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.rh0.2012-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.rh0.2012-01-01-00000.nc to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/rest/2012-01-01-00000/testing_bayesopt_nobuild_2D.clm2.rh0.2012-01-01-00000.nc
+ WARNING: ncdump -v locfnh /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.rh1.2012-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.rh1.2012-01-01-00000.nc to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/rest/2012-01-01-00000/testing_bayesopt_nobuild_2D.clm2.rh1.2012-01-01-00000.nc
+Archiving restarts for mosart (rof)
+Archiving restarts for drv (cpl)
+copying file /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.cpl.r.2012-01-01-00000.nc to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/rest/2012-01-01-00000/testing_bayesopt_nobuild_2D.cpl.r.2012-01-01-00000.nc
+Archiving restarts for dart (esp)
+Archiving history files for datm (atm)
+Archiving history files for clm (lnd)
+copying /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.h0.2011-02-01-00000.nc to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/lnd/hist/testing_bayesopt_nobuild_2D.clm2.h0.2011-02-01-00000.nc 
+copying /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.h1.2012-01-01-00000.nc to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/lnd/hist/testing_bayesopt_nobuild_2D.clm2.h1.2012-01-01-00000.nc 
+moving /glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/testing_bayesopt_nobuild_2D.clm2.h1.2011-01-01-00000.nc to /glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/lnd/hist/testing_bayesopt_nobuild_2D.clm2.h1.2011-01-01-00000.nc 
+Archiving history files for mosart (rof)
+Archiving history files for drv (cpl)
+Archiving history files for dart (esp)
+st_archive completed

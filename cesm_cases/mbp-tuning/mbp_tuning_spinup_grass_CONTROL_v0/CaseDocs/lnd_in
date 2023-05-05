@@ -23,7 +23,7 @@
  n_melt_glcmec = 10.0d00
  nlevsno = 12
  nsegspc = 35
- paramfile = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/paramdata/clm5_params.c171117.nc'
+ paramfile = '/glade/work/marielj/inputdata/lnd/clm2/paramdata/clm5_params_augmented_base.c171117.nc'
  run_zero_weight_urban = .false.
  soil_layerstruct = '20SL_8.5m'
  use_bedrock = .true.
@@ -200,6 +200,6 @@
 !#--------------------------------------------------------------------------------------------------------------------------
 !# lnd_in:: Comment:
 !# This namelist was created using the following command-line:
-!#     /glade/u/home/marielj/cesm2.1.3/components/clm/bld/CLM build-namelist -cimeroot /glade/u/home/marielj/cesm2.1.3/cime/scripts/Tools/../.. -infile /glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_CONTROL_v0/Buildconf/clmconf/namelist -csmdata /glade/p/cesmdata/cseg/inputdata -inputdata /glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_CONTROL_v0/Buildconf/clm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=20110101 /  -use_case 2000_control -res 1x1pt_US-MBP -clm_usr_name 1x1pt_US-MBP -clm_start_type default -envxml_dir /glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_CONTROL_v0 -l_ncpl 48 -lnd_frac /glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic/domain.lnd.1x1pt_US-MBP_navy.230220.nc -glc_nec 10 -co2_ppmv 367.0 -co2_type constant -config /glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_CONTROL_v0/Buildconf/clmconf/config_cache.xml -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm5_0_CRUv7
+!#     /glade/u/home/marielj/cesm2.1.3/components/clm/bld/CLM build-namelist -cimeroot /glade/u/home/marielj/cesm2.1.3/cime -infile /glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_CONTROL_v0/Buildconf/clmconf/namelist -csmdata /glade/p/cesmdata/cseg/inputdata -inputdata /glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_CONTROL_v0/Buildconf/clm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=20110101 /  -use_case 2000_control -res 1x1pt_US-MBP -clm_usr_name 1x1pt_US-MBP -clm_start_type default -envxml_dir /glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_CONTROL_v0 -l_ncpl 48 -lnd_frac /glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic/domain.lnd.1x1pt_US-MBP_navy.230220.nc -glc_nec 10 -co2_ppmv 367.0 -co2_type constant -config /glade/u/home/marielj/clm_frost/cesm_cases/mbp-tuning/mbp_tuning_spinup_grass_CONTROL_v0/Buildconf/clmconf/config_cache.xml -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm5_0_CRUv7
 !# For help on options use: /glade/u/home/marielj/cesm2.1.3/components/clm/bld/CLM build-namelist -help
 !#--------------------------------------------------------------------------------------------------------------------------

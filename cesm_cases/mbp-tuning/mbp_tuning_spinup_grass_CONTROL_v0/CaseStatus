@@ -101,3 +101,412 @@ Checking status of externals: cam, chem_proc, carma, clubb, cosp2, cice, cime, c
  ---------------------------------------------------
 2023-03-03 18:29:01: st_archive success 
  ---------------------------------------------------
+2023-03-15 13:07:19: build.clean starting 
+ ---------------------------------------------------
+2023-03-15 13:07:20: build.clean success 
+ ---------------------------------------------------
+2023-03-15 13:07:44: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CAM.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Checking status of externals: cam, chem_proc, carma, clubb, cosp2, cice, cime, cism, source_cism, clm, fates, ptclm, mosart, pop, cvmix, marbl, rtm, ww3, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+ M  ./components/clm
+        modified sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+ M  ./components/clm/tools/PTCLM
+        modified sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-03-15 13:16:54: case.build success 
+ ---------------------------------------------------
+2023-03-15 13:19:47: case.submit starting 
+ ---------------------------------------------------
+2023-03-15 13:19:50: case.submit success case.run:8912037.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8912038.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-03-15 13:20:05: case.run starting 
+ ---------------------------------------------------
+2023-03-15 13:20:09: model execution starting 
+ ---------------------------------------------------
+2023-03-15 13:26:06: model execution success 
+ ---------------------------------------------------
+2023-03-15 13:26:06: case.run success 
+ ---------------------------------------------------
+2023-03-15 13:26:18: st_archive starting 
+ ---------------------------------------------------
+2023-03-15 13:26:18: st_archive success 
+ ---------------------------------------------------
+2023-03-15 13:29:26: case.submit starting 
+ ---------------------------------------------------
+2023-03-15 13:29:28: case.submit success case.run:8912387.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8912388.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-03-15 13:29:38: case.run starting 
+ ---------------------------------------------------
+2023-03-15 13:29:40: model execution starting 
+ ---------------------------------------------------
+2023-03-15 13:32:34: model execution success 
+ ---------------------------------------------------
+2023-03-15 13:32:34: case.run success 
+ ---------------------------------------------------
+2023-03-15 13:32:43: st_archive starting 
+ ---------------------------------------------------
+2023-03-15 13:32:43: st_archive success 
+ ---------------------------------------------------
+2023-03-15 13:39:24: case.setup starting 
+ ---------------------------------------------------
+2023-03-15 13:39:24: case.setup success 
+ ---------------------------------------------------
+2023-03-15 13:39:35: build.clean starting 
+ ---------------------------------------------------
+2023-03-15 13:39:39: build.clean success 
+ ---------------------------------------------------
+2023-03-15 13:40:15: case.build starting 
+ ---------------------------------------------------
+2023-03-15 13:47:54: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230315-134015
+ ---------------------------------------------------
+2023-03-15 14:08:53: build.clean starting 
+ ---------------------------------------------------
+2023-03-15 14:08:55: build.clean success 
+ ---------------------------------------------------
+2023-03-15 14:09:16: case.build starting 
+ ---------------------------------------------------
+2023-03-15 14:17:01: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230315-140916
+ ---------------------------------------------------
+2023-03-15 14:24:27: case.setup starting 
+ ---------------------------------------------------
+2023-03-15 14:24:27: case.setup success 
+ ---------------------------------------------------
+2023-03-15 14:24:33: build.clean starting 
+ ---------------------------------------------------
+2023-03-15 14:24:36: build.clean success 
+ ---------------------------------------------------
+2023-03-15 14:24:55: case.build starting 
+ ---------------------------------------------------
+2023-03-15 14:26:48: build.clean starting 
+ ---------------------------------------------------
+2023-03-15 14:26:48: build.clean success 
+ ---------------------------------------------------
+2023-03-15 14:26:48: case.build error 
+[Errno 2] No such file or directory: '/glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/mct.bldlog.230315-142455'
+ ---------------------------------------------------
+2023-03-15 14:27:47: case.setup starting 
+ ---------------------------------------------------
+2023-03-15 14:27:48: case.setup success 
+ ---------------------------------------------------
+2023-03-15 14:28:10: case.build starting 
+ ---------------------------------------------------
+2023-03-15 14:35:47: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230315-142810
+ ---------------------------------------------------
+2023-03-15 14:55:05: case.setup starting 
+ ---------------------------------------------------
+2023-03-15 14:55:06: case.setup success 
+ ---------------------------------------------------
+2023-03-15 14:55:16: build.clean starting 
+ ---------------------------------------------------
+2023-03-15 14:55:19: build.clean success 
+ ---------------------------------------------------
+2023-03-15 14:55:42: case.build starting 
+ ---------------------------------------------------
+2023-03-15 15:03:21: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230315-145542
+ ---------------------------------------------------
+2023-03-15 15:11:13: build.clean starting 
+ ---------------------------------------------------
+2023-03-15 15:11:15: build.clean success 
+ ---------------------------------------------------
+2023-03-15 15:11:41: case.build starting 
+ ---------------------------------------------------
+2023-03-15 15:19:22: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230315-151141
+ ---------------------------------------------------
+2023-03-15 16:10:43: case.setup starting 
+ ---------------------------------------------------
+2023-03-15 16:10:43: case.setup success 
+ ---------------------------------------------------
+2023-03-15 16:10:50: build.clean starting 
+ ---------------------------------------------------
+2023-03-15 16:10:52: build.clean success 
+ ---------------------------------------------------
+2023-03-15 16:11:23: case.build starting 
+ ---------------------------------------------------
+2023-03-15 16:19:01: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230315-161123
+ ---------------------------------------------------
+2023-03-22 09:14:10: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 09:14:11: build.clean success 
+ ---------------------------------------------------
+2023-03-22 09:14:29: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CAM.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Checking status of externals: cam, chem_proc, carma, clubb, cosp2, cice, cime, cism, source_cism, clm, fates, ptclm, mosart, pop, cvmix, marbl, rtm, ww3, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+ M  ./components/clm
+        modified sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+ M  ./components/clm/tools/PTCLM
+        modified sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-03-22 09:23:52: case.build success 
+ ---------------------------------------------------
+2023-03-22 09:24:16: case.submit starting 
+ ---------------------------------------------------
+2023-03-22 09:24:19: case.submit success case.run:8980861.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8980862.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-03-22 09:24:24: case.run starting 
+ ---------------------------------------------------
+2023-03-22 09:24:26: model execution starting 
+ ---------------------------------------------------
+2023-03-22 09:27:19: model execution success 
+ ---------------------------------------------------
+2023-03-22 09:27:19: case.run success 
+ ---------------------------------------------------
+2023-03-22 09:27:26: st_archive starting 
+ ---------------------------------------------------
+2023-03-22 09:27:26: st_archive success 
+ ---------------------------------------------------
+2023-03-22 09:45:37: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 09:45:40: build.clean success 
+ ---------------------------------------------------
+2023-03-22 09:46:20: case.build starting 
+ ---------------------------------------------------
+2023-03-22 09:53:37: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230322-094620
+ ---------------------------------------------------
+2023-03-22 10:01:47: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 10:01:49: build.clean success 
+ ---------------------------------------------------
+2023-03-22 10:01:58: case.build starting 
+ ---------------------------------------------------
+2023-03-22 10:09:18: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230322-100158
+ ---------------------------------------------------
+2023-03-22 10:10:22: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 10:10:24: build.clean success 
+ ---------------------------------------------------
+2023-03-22 10:17:25: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 10:17:25: build.clean success 
+ ---------------------------------------------------
+2023-03-22 10:17:40: case.build starting 
+ ---------------------------------------------------
+2023-03-22 10:24:59: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230322-101741
+ ---------------------------------------------------
+2023-03-22 10:30:52: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 10:30:54: build.clean success 
+ ---------------------------------------------------
+2023-03-22 10:31:04: case.build starting 
+ ---------------------------------------------------
+2023-03-22 10:38:18: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230322-103104
+ ---------------------------------------------------
+2023-03-22 10:42:50: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 10:42:52: build.clean success 
+ ---------------------------------------------------
+2023-03-22 10:43:00: case.build starting 
+ ---------------------------------------------------
+2023-03-22 10:50:16: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230322-104300
+ ---------------------------------------------------
+2023-03-22 11:09:10: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 11:09:12: build.clean success 
+ ---------------------------------------------------
+2023-03-22 11:09:31: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CAM.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Checking status of externals: cam, chem_proc, carma, clubb, cosp2, cice, cime, cism, source_cism, clm, fates, ptclm, mosart, pop, cvmix, marbl, rtm, ww3, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+ M  ./components/clm
+        modified sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+ M  ./components/clm/tools/PTCLM
+        modified sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-03-22 11:19:02: case.build success 
+ ---------------------------------------------------
+2023-03-22 11:20:25: case.submit starting 
+ ---------------------------------------------------
+2023-03-22 11:20:27: case.submit success case.run:8982295.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8982297.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-03-22 11:20:37: case.run starting 
+ ---------------------------------------------------
+2023-03-22 11:20:40: model execution starting 
+ ---------------------------------------------------
+2023-03-22 11:26:37: model execution success 
+ ---------------------------------------------------
+2023-03-22 11:26:37: case.run success 
+ ---------------------------------------------------
+2023-03-22 11:26:49: st_archive starting 
+ ---------------------------------------------------
+2023-03-22 11:26:49: st_archive success 
+ ---------------------------------------------------
+2023-03-22 11:39:33: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 11:39:35: build.clean success 
+ ---------------------------------------------------
+2023-03-22 11:40:03: case.build starting 
+ ---------------------------------------------------
+2023-03-22 11:47:54: case.build error 
+ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/lnd.bldlog.230322-114003
+ ---------------------------------------------------
+2023-03-22 11:52:22: build.clean starting 
+ ---------------------------------------------------
+2023-03-22 11:52:25: build.clean success 
+ ---------------------------------------------------
+2023-03-22 11:52:51: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CAM.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Checking status of externals: cam, chem_proc, carma, clubb, cosp2, cice, cime, cism, source_cism, clm, fates, ptclm, mosart, pop, cvmix, marbl, rtm, ww3, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+ M  ./components/clm
+        modified sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+ M  ./components/clm/tools/PTCLM
+        modified sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-03-22 12:02:33: case.build success 
+ ---------------------------------------------------

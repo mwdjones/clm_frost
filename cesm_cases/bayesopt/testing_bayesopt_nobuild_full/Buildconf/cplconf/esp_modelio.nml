@@ -1,0 +1,13 @@
+&modelio
+  diri = "/glade/scratch/marielj/testing_bayesopt_nobuild_full/bld/esp"
+  diro = "/glade/scratch/marielj/testing_bayesopt_nobuild_full/run"
+  logfile = "esp.log.9963365.chadmin1.ib0.cheyenne.ucar.edu.230502-123149"
+/
+&pio_inparm
+  pio_netcdf_format = ""
+  pio_numiotasks = -99
+  pio_rearranger = -99
+  pio_root = -99
+  pio_stride = -99
+  pio_typename = "nothing"
+/

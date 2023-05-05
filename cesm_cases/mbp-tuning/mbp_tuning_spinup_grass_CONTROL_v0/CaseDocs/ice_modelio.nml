@@ -1,7 +1,7 @@
 &modelio
   diri = "/glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/bld/ice"
   diro = "/glade/scratch/marielj/mbp_tuning_spinup_grass_CONTROL_v0/run"
-  logfile = "ice.log.8801235.chadmin1.ib0.cheyenne.ucar.edu.230303-182600"
+  logfile = "ice.log.230322-115251"
 /
 &pio_inparm
   pio_netcdf_format = "64bit_offset"

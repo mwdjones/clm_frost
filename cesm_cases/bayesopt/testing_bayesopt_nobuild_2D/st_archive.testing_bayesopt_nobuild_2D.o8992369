@@ -1,0 +1,31 @@
+Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+st_archive starting
+Traceback (most recent call last):
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/shutil.py", line 825, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/cesm.log.8992368.chadmin1.ib0.cheyenne.ucar.edu.230323-093228.gz' -> '/glade/scratch/marielj/archive/testing_bayesopt_nobuild_2D/logs/cesm.log.8992368.chadmin1.ib0.cheyenne.ucar.edu.230323-093228.gz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/spool/pbs/mom_priv/jobs/8992369.chadmin1.ib0.cheyenne.ucar.edu.SC", line 102, in <module>
+    _main_func(__doc__)
+  File "/var/spool/pbs/mom_priv/jobs/8992369.chadmin1.ib0.cheyenne.ucar.edu.SC", line 93, in _main_func
+    success = case.case_st_archive(last_date_str=last_date,
+  File "/glade/u/home/marielj/cesm2.1.3/cime/scripts/Tools/../../scripts/lib/CIME/case/case_st_archive.py", line 743, in case_st_archive
+    run_and_log_case_status(functor, "st_archive", caseroot=caseroot)
+  File "/glade/u/home/marielj/cesm2.1.3/cime/scripts/Tools/../../scripts/lib/CIME/utils.py", line 1683, in run_and_log_case_status
+    rv = func()
+  File "/glade/u/home/marielj/cesm2.1.3/cime/scripts/Tools/../../scripts/lib/CIME/case/case_st_archive.py", line 742, in <lambda>
+    functor = lambda: _archive_process(self, archive, last_date, archive_incomplete_logs, copy_only)
+  File "/glade/u/home/marielj/cesm2.1.3/cime/scripts/Tools/../../scripts/lib/CIME/case/case_st_archive.py", line 608, in _archive_process
+    _archive_log_files(dout_s_root, rundir,
+  File "/glade/u/home/marielj/cesm2.1.3/cime/scripts/Tools/../../scripts/lib/CIME/case/case_st_archive.py", line 197, in _archive_log_files
+    archive_file_fn(srcfile, destfile)
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/shutil.py", line 845, in move
+    copy_function(src, real_dst)
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/shutil.py", line 444, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/shutil.py", line 264, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/glade/scratch/marielj/testing_bayesopt_nobuild_2D/run/cesm.log.8992368.chadmin1.ib0.cheyenne.ucar.edu.230323-093228.gz'

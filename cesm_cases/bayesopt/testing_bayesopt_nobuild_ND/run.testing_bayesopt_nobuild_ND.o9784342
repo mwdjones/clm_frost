@@ -1,0 +1,25 @@
+Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+Generating namelists for /glade/u/home/marielj/clm_frost/cesm_cases/bayesopt/testing_bayesopt_nobuild_ND
+Creating component namelists
+   Calling /glade/u/home/marielj/cesm2.1.3/cime/src/components/data_comps/datm/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.3/components/clm//cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.3/cime/src/components/stub_comps/sice/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.3/cime/src/components/stub_comps/socn/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.3/components/mosart//cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.3/cime/src/components/stub_comps/sglc/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.3/cime/src/components/stub_comps/swav/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.3/cime/src/components/stub_comps/sesp/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.3/cime/src/drivers/mct/cime_config/buildnml
+Finished creating component namelists
+-------------------------------------------------------------------------
+ - Prestage required restarts into /glade/scratch/marielj/testing_bayesopt_nobuild_ND/run
+ - Case input data directory (DIN_LOC_ROOT) is /glade/p/cesmdata/cseg/inputdata 
+ - Checking for required input datasets in DIN_LOC_ROOT
+-------------------------------------------------------------------------
+2023-04-25 15:33:56 MODEL EXECUTION BEGINS HERE
+run command is mpirun `hostname`  -np 1  omplace -tm open64  /glade/scratch/marielj/testing_bayesopt_nobuild_ND/bld/cesm.exe  >> cesm.log.$LID 2>&1  
+2023-04-25 15:34:23 MODEL EXECUTION HAS FINISHED
+check for resubmit
+dout_s True 
+mach cheyenne 
+resubmit_num 0
