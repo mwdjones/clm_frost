@@ -1,7 +1,7 @@
 &modelio
   diri = "/glade/scratch/marielj/testing_bayesopt_nobuild_ND_7y/bld/wav"
   diro = "/glade/scratch/marielj/testing_bayesopt_nobuild_ND_7y/run"
-  logfile = "wav.log.9990103.chadmin1.ib0.cheyenne.ucar.edu.230503-091137"
+  logfile = "wav.log.204940.chadmin1.ib0.cheyenne.ucar.edu.230515-100345"
 /
 &pio_inparm
   pio_netcdf_format = "64bit_offset"

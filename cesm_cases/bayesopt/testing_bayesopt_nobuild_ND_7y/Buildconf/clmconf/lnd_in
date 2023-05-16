@@ -96,7 +96,7 @@
 &century_soilbgcdecompcascade
 /
 &soilhydrology_inparm
- baseflow_scalar = 0
+ baseflow_scalar = 2.2636421640139125e-12
 /
 &luna
  jmaxb1 = 0.093563
