@@ -1,0 +1,98 @@
+/glade/u/home/marielj/clm_frost/clm-runscripts/calibrate-single-parameter-bayesopt.py:119: DeprecationWarning: 
+Passing acquisition function parameters or gaussian process parameters to maximize
+is no longer supported, and will cause an error in future releases. Instead,
+please use the "set_gp_params" method to set the gp params, and pass an instance
+ of bayes_opt.util.UtilityFunction using the acquisition_function argument
+
+  clm_optimizer.maximize(init_points = 10, n_iter = 20,
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+Case already exists.

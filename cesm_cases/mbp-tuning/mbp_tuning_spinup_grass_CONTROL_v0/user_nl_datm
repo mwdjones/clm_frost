@@ -11,3 +11,4 @@
 ! place a copy of the  modified stream txt file in $CASEROOT with the string
 ! user_ prepended.
 !------------------------------------------------------------------------
+taxmode = "cycle", "cycle", "cycle"

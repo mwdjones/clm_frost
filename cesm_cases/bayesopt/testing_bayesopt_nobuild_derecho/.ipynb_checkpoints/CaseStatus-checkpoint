@@ -1,0 +1,40 @@
+2024-03-13 14:41:15: case.setup starting 
+ ---------------------------------------------------
+2024-03-13 14:41:17: case.setup success 
+ ---------------------------------------------------
+2024-03-13 14:41:17: xmlchange success <command> ./xmlchange DATM_MODE=CLM1PT  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:18: xmlchange success <command> ./xmlchange CLM_FORCE_COLDSTART=off  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:18: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:19: xmlchange success <command> ./xmlchange CLM_USRDAT_NAME=1x1pt_US-MBP  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:19: xmlchange success <command> ./xmlchange CALENDAR=NO_LEAP  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:20: xmlchange success <command> ./xmlchange RUN_STARTDATE=2011-01-01  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:20: xmlchange success <command> ./xmlchange DATM_CLMNCEP_YR_ALIGN=2011  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:20: xmlchange success <command> ./xmlchange DATM_CLMNCEP_YR_START=2011  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:21: xmlchange success <command> ./xmlchange DATM_CLMNCEP_YR_END=2017  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:21: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:22: xmlchange success <command> ./xmlchange STOP_N=7  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:22: xmlchange success <command> ./xmlchange DIN_LOC_ROOT_CLMFORC=/glade/work/marielj/inputdata/atm/datm7/CLM1PT_data  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:23: xmlchange success <command> ./xmlchange ATM_DOMAIN_PATH=/glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:23: xmlchange success <command> ./xmlchange LND_DOMAIN_PATH=/glade/work/marielj/inputdata/lnd/clm2/surfdata_map/arcticgrass-organic  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:24: xmlchange success <command> ./xmlchange ATM_DOMAIN_FILE=domain.lnd.1x1pt_US-MBP_navy.230220.nc  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:24: xmlchange success <command> ./xmlchange LND_DOMAIN_FILE=domain.lnd.1x1pt_US-MBP_navy.230220.nc  </command>
+ ---------------------------------------------------
+2024-03-13 14:41:25: build.clean starting 
+ ---------------------------------------------------
+2024-03-13 14:41:25: build.clean success 
+ ---------------------------------------------------

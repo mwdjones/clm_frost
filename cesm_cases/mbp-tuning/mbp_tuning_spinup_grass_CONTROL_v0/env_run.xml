@@ -110,7 +110,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="2011-01-01">
+    <entry id="RUN_STARTDATE" value="2004-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -129,7 +129,7 @@
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="7">
+    <entry id="STOP_N" value="14">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -252,7 +252,7 @@
       timing tests.
     </desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:8982295.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8982297.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:3438963.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:3438966.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>

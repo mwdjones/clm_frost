@@ -1,0 +1,45 @@
+st_archive starting
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/lnd.log.3986801.desched1.240401-125507 to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/logs/lnd.log.3986801.desched1.240401-125507
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/atm.log.3986857.desched1.240401-130245.gz to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/logs/atm.log.3986857.desched1.240401-130245.gz
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/cesm.log.3986857.desched1.240401-130245.gz to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/logs/cesm.log.3986857.desched1.240401-130245.gz
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/atm.log.3986801.desched1.240401-125507 to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/logs/atm.log.3986801.desched1.240401-125507
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/lnd.log.3986857.desched1.240401-130245.gz to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/logs/lnd.log.3986857.desched1.240401-130245.gz
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/cpl.log.3986801.desched1.240401-125507 to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/logs/cpl.log.3986801.desched1.240401-125507
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/cesm.log.3986801.desched1.240401-125507 to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/logs/cesm.log.3986801.desched1.240401-125507
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/rof.log.3986857.desched1.240401-130245.gz to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/logs/rof.log.3986857.desched1.240401-130245.gz
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/cpl.log.3986857.desched1.240401-130245.gz to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/logs/cpl.log.3986857.desched1.240401-130245.gz
+-------------------------------------------
+Archiving restarts for date date(2018, 1, 1, 0, 0, 0)
+-------------------------------------------
+Archiving restarts for datm (atm)
+Archiving restarts for clm (lnd)
+copying file /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.r.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/rest/2018-01-01-00000/derecho_base_nocalib.clm2.r.2018-01-01-00000.nc
+Copying /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h1.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/rest/2018-01-01-00000/derecho_base_nocalib.clm2.h1.2018-01-01-00000.nc
+Copying /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h0.2011-02-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/rest/2018-01-01-00000/derecho_base_nocalib.clm2.h0.2011-02-01-00000.nc
+ WARNING: ncdump -v locfnh /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.rh0.2018-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.rh0.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/rest/2018-01-01-00000/derecho_base_nocalib.clm2.rh0.2018-01-01-00000.nc
+ WARNING: ncdump -v locfnh /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.rh1.2018-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.rh1.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/rest/2018-01-01-00000/derecho_base_nocalib.clm2.rh1.2018-01-01-00000.nc
+Archiving restarts for mosart (rof)
+Archiving restarts for drv (cpl)
+copying file /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.cpl.r.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/rest/2018-01-01-00000/derecho_base_nocalib.cpl.r.2018-01-01-00000.nc
+Archiving restarts for dart (esp)
+Archiving history files for datm (atm)
+Archiving history files for clm (lnd)
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h1.2017-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/lnd/hist/derecho_base_nocalib.clm2.h1.2017-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h1.2016-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/lnd/hist/derecho_base_nocalib.clm2.h1.2016-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h1.2011-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/lnd/hist/derecho_base_nocalib.clm2.h1.2011-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h1.2014-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/lnd/hist/derecho_base_nocalib.clm2.h1.2014-01-01-00000.nc 
+copying /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h1.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/lnd/hist/derecho_base_nocalib.clm2.h1.2018-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h1.2012-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/lnd/hist/derecho_base_nocalib.clm2.h1.2012-01-01-00000.nc 
+copying /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h0.2011-02-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/lnd/hist/derecho_base_nocalib.clm2.h0.2011-02-01-00000.nc 
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h1.2015-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/lnd/hist/derecho_base_nocalib.clm2.h1.2015-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/derecho_base_nocalib/run/derecho_base_nocalib.clm2.h1.2013-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/derecho_base_nocalib/lnd/hist/derecho_base_nocalib.clm2.h1.2013-01-01-00000.nc 
+Archiving history files for mosart (rof)
+Archiving history files for drv (cpl)
+Archiving history files for dart (esp)
+st_archive completed

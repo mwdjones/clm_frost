@@ -133,11 +133,11 @@ def setup_mef_case(CASEROOT_DIR, CASE_NAME, MODS = True, nyears = 7, BUILD = Tru
     ######
 
     #Source Root - Where the CESM code lives
-    SRCROOT_DIR = '/glade/u/home/marielj/cesm2.1.3'
+    SRCROOT_DIR = '/glade/u/home/marielj/cesm2.1.5'
     #CIME Root - Where the CIME code lives, i.e. where the create_newcase scripts are
-    CIMEROOT_DIR = '/glade/u/home/marielj/cesm2.1.3/cime'
+    CIMEROOT_DIR = '/glade/u/home/marielj/cesm2.1.5/cime'
     #User Mods Dir - Where the surface and domain files are
-    USER_MODS_DIR = '/glade/u/home/marielj/cesm2.1.3/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP'
+    USER_MODS_DIR = '/glade/u/home/marielj/cesm2.1.5/components/clm/tools/PTCLM/mydatafiles/1x1pt_US-MBP'
     #Forcing Data Root - Where the atmospheric forcing data is
     CLMFORC_DIR = '/glade/work/marielj/inputdata/atm/datm7/CLM1PT_data'
     COMPSET = '2000_DATM%1PT_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV'  #I1PtClm50SpGs
@@ -152,7 +152,7 @@ def setup_mef_case(CASEROOT_DIR, CASE_NAME, MODS = True, nyears = 7, BUILD = Tru
         subprocess.check_output(['./create_newcase',
                         '--case=%s' % CASE_DIR,
                         '--compset=%s' % COMPSET,
-                        '--user-mods-dir=%s' % USER_MODS_DIR,
+                        #'--user-mods-dir=%s' % USER_MODS_DIR,
                         '--res=CLM_USRDAT', 
                         '--project=UMIN0008', 
                         '--run-unsupported',
@@ -240,7 +240,7 @@ def setup_mef_case(CASEROOT_DIR, CASE_NAME, MODS = True, nyears = 7, BUILD = Tru
         os.chdir(CASE_DIR)
     
         pipe = subprocess.Popen(['./case.build', '--clean-all'], stdout=subprocess.PIPE)
-        pipe = subprocess.Popen(['qcmd', '-- ./case.build'], stdout=subprocess.PIPE)
+        pipe = subprocess.Popen(['./case.build'], stdout=subprocess.PIPE)
         result = pipe.communicate()[0]
         print(result)
         print("Case is built and ready to run.")

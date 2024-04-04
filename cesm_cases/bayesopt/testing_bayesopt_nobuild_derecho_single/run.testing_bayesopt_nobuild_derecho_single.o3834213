@@ -1,0 +1,24 @@
+Generating namelists for /glade/u/home/marielj/clm_frost/cesm_cases/bayesopt/testing_bayesopt_nobuild_derecho_single
+Creating component namelists
+   Calling /glade/u/home/marielj/cesm2.1.5/cime/src/components/data_comps/datm/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.5/components/clm//cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.5/cime/src/components/stub_comps/sice/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.5/cime/src/components/stub_comps/socn/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.5/components/mosart//cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.5/cime/src/components/stub_comps/sglc/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.5/cime/src/components/stub_comps/swav/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.5/cime/src/components/stub_comps/sesp/cime_config/buildnml
+   Calling /glade/u/home/marielj/cesm2.1.5/cime/src/drivers/mct/cime_config/buildnml
+Finished creating component namelists
+-------------------------------------------------------------------------
+ - Prestage required restarts into /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run
+ - Case input data directory (DIN_LOC_ROOT) is /glade/campaign/cesm/cesmdata/inputdata 
+ - Checking for required input datasets in DIN_LOC_ROOT
+-------------------------------------------------------------------------
+2024-03-18 11:05:46 MODEL EXECUTION BEGINS HERE
+run command is mpiexec  --label  --line-buffer  -n 1 /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/bld/cesm.exe  >> cesm.log.$LID 2>&1  
+2024-03-18 11:07:25 MODEL EXECUTION HAS FINISHED
+check for resubmit
+dout_s True 
+mach derecho 
+resubmit_num 0

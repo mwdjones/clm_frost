@@ -1,0 +1,41 @@
+st_archive starting
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/rof.log.3838253.desched1.240318-153015.gz to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/logs/rof.log.3838253.desched1.240318-153015.gz
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/atm.log.3838253.desched1.240318-153015.gz to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/logs/atm.log.3838253.desched1.240318-153015.gz
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/cpl.log.3838253.desched1.240318-153015.gz to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/logs/cpl.log.3838253.desched1.240318-153015.gz
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/cesm.log.3838253.desched1.240318-153015.gz to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/logs/cesm.log.3838253.desched1.240318-153015.gz
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/lnd.log.3838253.desched1.240318-153015.gz to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/logs/lnd.log.3838253.desched1.240318-153015.gz
+-------------------------------------------
+Archiving restarts for date date(2018, 1, 1, 0, 0, 0)
+-------------------------------------------
+Archiving restarts for datm (atm)
+Archiving restarts for clm (lnd)
+copying file /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.r.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/rest/2018-01-01-00000/testing_bayesopt_nobuild_derecho_single.clm2.r.2018-01-01-00000.nc
+Copying /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h1.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/rest/2018-01-01-00000/testing_bayesopt_nobuild_derecho_single.clm2.h1.2018-01-01-00000.nc
+Copying /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h0.2011-02-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/rest/2018-01-01-00000/testing_bayesopt_nobuild_derecho_single.clm2.h0.2011-02-01-00000.nc
+ WARNING: ncdump -v locfnh /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.rh0.2018-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.rh0.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/rest/2018-01-01-00000/testing_bayesopt_nobuild_derecho_single.clm2.rh0.2018-01-01-00000.nc
+ WARNING: ncdump -v locfnh /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.rh1.2018-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.rh1.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/rest/2018-01-01-00000/testing_bayesopt_nobuild_derecho_single.clm2.rh1.2018-01-01-00000.nc
+Archiving restarts for mosart (rof)
+Archiving restarts for drv (cpl)
+copying file /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.cpl.r.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/rest/2018-01-01-00000/testing_bayesopt_nobuild_derecho_single.cpl.r.2018-01-01-00000.nc
+Archiving restarts for dart (esp)
+Archiving history files for datm (atm)
+Archiving history files for clm (lnd)
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h1.2015-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/lnd/hist/testing_bayesopt_nobuild_derecho_single.clm2.h1.2015-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h1.2014-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/lnd/hist/testing_bayesopt_nobuild_derecho_single.clm2.h1.2014-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h1.2011-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/lnd/hist/testing_bayesopt_nobuild_derecho_single.clm2.h1.2011-01-01-00000.nc 
+copying /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h1.2018-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/lnd/hist/testing_bayesopt_nobuild_derecho_single.clm2.h1.2018-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h1.2012-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/lnd/hist/testing_bayesopt_nobuild_derecho_single.clm2.h1.2012-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h1.2013-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/lnd/hist/testing_bayesopt_nobuild_derecho_single.clm2.h1.2013-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h1.2016-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/lnd/hist/testing_bayesopt_nobuild_derecho_single.clm2.h1.2016-01-01-00000.nc 
+moving /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h1.2017-01-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/lnd/hist/testing_bayesopt_nobuild_derecho_single.clm2.h1.2017-01-01-00000.nc 
+copying /glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run/testing_bayesopt_nobuild_derecho_single.clm2.h0.2011-02-01-00000.nc to /glade/derecho/scratch/marielj/archive/testing_bayesopt_nobuild_derecho_single/lnd/hist/testing_bayesopt_nobuild_derecho_single.clm2.h0.2011-02-01-00000.nc 
+Archiving history files for mosart (rof)
+Archiving history files for drv (cpl)
+Archiving history files for dart (esp)
+st_archive completed

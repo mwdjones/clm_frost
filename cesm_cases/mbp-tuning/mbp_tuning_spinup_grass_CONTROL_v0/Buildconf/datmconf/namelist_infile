@@ -1,3 +1,5 @@
 &comp_inparm 
 
+taxmode = "cycle", "cycle", "cycle"
+
 / 

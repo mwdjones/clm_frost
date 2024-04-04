@@ -244,13 +244,13 @@
   pause_active_wav = .false.
   pause_n = 0
   pause_option = "never"
-  restart_n = 7
+  restart_n = 14
   restart_option = "nyears"
   restart_ymd = -999
   rof_cpl_dt = 10800
   start_tod = 0
-  start_ymd = 20110101
-  stop_n = 7
+  start_ymd = 20040101
+  stop_n = 14
   stop_option = "nyears"
   stop_ymd = -999
   tprof_n = -999

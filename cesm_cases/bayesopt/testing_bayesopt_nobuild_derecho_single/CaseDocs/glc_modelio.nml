@@ -1,0 +1,13 @@
+&modelio
+  diri = "/glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/bld/glc"
+  diro = "/glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho_single/run"
+  logfile = "glc.log.3838924.desched1.240318-161346"
+/
+&pio_inparm
+  pio_netcdf_format = "64bit_offset"
+  pio_numiotasks = -99
+  pio_rearranger = 1
+  pio_root = 1
+  pio_stride = 128
+  pio_typename = "netcdf"
+/

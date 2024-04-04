@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/var/spool/pbs/mom_priv/jobs/3799243.desched1.SC", line 75, in <module>
+    _main_func(__doc__)
+  File "/var/spool/pbs/mom_priv/jobs/3799243.desched1.SC", line 70, in _main_func
+    success = case.case_run(skip_pnl=skip_pnl, set_continue_run=set_continue_run, submit_resubmits=resubmit)
+  File "/glade/u/home/marielj/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/case/case_run.py", line 289, in case_run
+    lid = _run_model(self, lid, skip_pnl, da_cycle=cycle)
+  File "/glade/u/home/marielj/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/case/case_run.py", line 166, in _run_model
+    return run_and_log_case_status(functor, "case.run", caseroot=case.get_value("CASEROOT"))
+  File "/glade/u/home/marielj/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/utils.py", line 1684, in run_and_log_case_status
+    rv = func()
+  File "/glade/u/home/marielj/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/case/case_run.py", line 165, in <lambda>
+    functor = lambda: _run_model_impl(case, lid, skip_pnl=skip_pnl, da_cycle=da_cycle)
+  File "/glade/u/home/marielj/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/case/case_run.py", line 84, in _run_model_impl
+    _pre_run_check(case, lid, skip_pnl=skip_pnl, da_cycle=da_cycle)
+  File "/glade/u/home/marielj/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/case/case_run.py", line 61, in _pre_run_check
+    shutil.rmtree(os.path.join(rundir, "timing"))
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/shutil.py", line 740, in rmtree
+    onerror(os.rmdir, path, sys.exc_info())
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/shutil.py", line 738, in rmtree
+    os.rmdir(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho/run/timing'

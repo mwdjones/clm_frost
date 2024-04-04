@@ -1,0 +1,134 @@
+2024-04-01 12:46:31: case.setup starting 
+ ---------------------------------------------------
+2024-04-01 12:46:32: case.setup success 
+ ---------------------------------------------------
+2024-04-01 12:48:18: build.clean starting 
+ ---------------------------------------------------
+2024-04-01 12:48:19: build.clean success 
+ ---------------------------------------------------
+2024-04-01 12:50:08: case.build starting 
+ ---------------------------------------------------
+CESM version is release-cesm2.1.5
+Processing externals description file : Externals.cfg (/glade/u/home/marielj/cesm2.1.5)
+Processing externals description file : Externals_CAM.cfg (/glade/u/home/marielj/cesm2.1.5/components/cam)
+Processing externals description file : Externals_CISM.cfg (/glade/u/home/marielj/cesm2.1.5/components/cism)
+Processing externals description file : Externals_CLM.cfg (/glade/u/home/marielj/cesm2.1.5/components/clm)
+Processing externals description file : Externals_POP.cfg (/glade/u/home/marielj/cesm2.1.5/components/pop)
+Checking local status of required & optional components: cam, chem_proc, carma, clubb, cosp2, cice, cime, cism, source_cism, clm, fates, mosart, pop, cvmix, marbl, rtm, ww3, 
+    ./cime
+        clean sandbox, on cime5.6.49
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_60
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on v2.1.4cesm
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20231220
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_04
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.04
+    ./components/clm
+        clean sandbox, on release-clm5.0.37
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n15
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2024-04-01 12:54:39: case.build success 
+ ---------------------------------------------------
+2024-04-01 12:54:51: case.submit starting 
+ ---------------------------------------------------
+2024-04-01 12:54:55: case.submit success case.run:3986801.desched1, case.st_archive:3986802.desched1
+ ---------------------------------------------------
+2024-04-01 12:55:07: case.run starting 
+ ---------------------------------------------------
+2024-04-01 12:55:13: model execution starting 
+ ---------------------------------------------------
+2024-04-01 12:55:20: model execution success 
+ ---------------------------------------------------
+2024-04-01 12:55:20: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 1 /glade/derecho/scratch/marielj/derecho_base_nocalib/bld/cesm.exe  >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/derecho/scratch/marielj/derecho_base_nocalib/run/cesm.log.3986801.desched1.240401-125507
+ ---------------------------------------------------
+2024-04-01 12:57:59: build.clean starting 
+ ---------------------------------------------------
+2024-04-01 12:58:00: build.clean success 
+ ---------------------------------------------------
+2024-04-01 12:58:04: case.build starting 
+ ---------------------------------------------------
+CESM version is release-cesm2.1.5
+Processing externals description file : Externals.cfg (/glade/u/home/marielj/cesm2.1.5)
+Processing externals description file : Externals_CAM.cfg (/glade/u/home/marielj/cesm2.1.5/components/cam)
+Processing externals description file : Externals_CISM.cfg (/glade/u/home/marielj/cesm2.1.5/components/cism)
+Processing externals description file : Externals_CLM.cfg (/glade/u/home/marielj/cesm2.1.5/components/clm)
+Processing externals description file : Externals_POP.cfg (/glade/u/home/marielj/cesm2.1.5/components/pop)
+Checking local status of required & optional components: cam, chem_proc, carma, clubb, cosp2, cice, cime, cism, source_cism, clm, fates, mosart, pop, cvmix, marbl, rtm, ww3, 
+    ./cime
+        clean sandbox, on cime5.6.49
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_60
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on v2.1.4cesm
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20231220
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_04
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.04
+    ./components/clm
+        clean sandbox, on release-clm5.0.37
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n15
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2024-04-01 13:02:03: case.build success 
+ ---------------------------------------------------
+2024-04-01 13:02:15: case.build starting 
+ ---------------------------------------------------
+2024-04-01 13:02:20: case.submit starting 
+ ---------------------------------------------------
+2024-04-01 13:02:25: case.submit success case.run:3986857.desched1, case.st_archive:3986858.desched1
+ ---------------------------------------------------
+2024-04-01 13:02:45: case.run starting 
+ ---------------------------------------------------
+2024-04-01 13:02:49: model execution starting 
+ ---------------------------------------------------
+2024-04-01 13:04:24: model execution success 
+ ---------------------------------------------------
+2024-04-01 13:04:24: case.run success 
+ ---------------------------------------------------
+2024-04-01 13:04:38: st_archive starting 
+ ---------------------------------------------------
+2024-04-01 13:04:39: st_archive success 
+ ---------------------------------------------------

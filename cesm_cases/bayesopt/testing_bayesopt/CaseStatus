@@ -300,3 +300,9 @@ Checking status of externals: cam, chem_proc, carma, clubb, cosp2, cice, cime, c
  ---------------------------------------------------
 2023-03-22 15:05:01: case.build starting 
  ---------------------------------------------------
+2024-03-13 13:44:19: case.build starting 
+ ---------------------------------------------------
+2024-03-13 13:44:20: case.build error 
+ERROR: module command /glade/u/apps/ch/opt/lmod/7.5.3/lmod/lmod/libexec/lmod python purge  failed with message:
+/bin/sh: /glade/u/apps/ch/opt/lmod/7.5.3/lmod/lmod/libexec/lmod: Permission denied
+ ---------------------------------------------------
