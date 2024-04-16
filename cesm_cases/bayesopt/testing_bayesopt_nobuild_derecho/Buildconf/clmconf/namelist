@@ -12,7 +12,7 @@
 
  paramfile = '/glade/work/marielj/inputdata/lnd/clm2/paramdata/clm5_params_augmented_base.c171117.nc'
 
- soil_fmax = 0.5045345786583838
+ soil_fmax = 0.47736542568659723
 
- baseflow_scalar = 9.942088903676034
+ baseflow_scalar = 3.685549515207808
 / 

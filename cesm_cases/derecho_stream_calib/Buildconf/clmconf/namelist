@@ -10,9 +10,9 @@
 
  hist_fincl2 = 'RAIN', 'H2OSNO', 'QSOIL', 'QVEGT', 'QSNOMELT', 'QRUNOFF', 'ZWT', 'ZWT_PERCH', 'SNOW', 'TSA', 'SOILICE', 'QINFL', 'QOVER', 'H2OSOI', 'TSOI'
 
- paramfile = '/glade/u/home/marielj/clm_frost/cesm_cases/clm5_params_bayesopt_stream.c171117.nc'
+ paramfile = '/glade/u/home/marielj/clm_frost/cesm_cases/clm5_params_bayesopt_stream_take2.c171117.nc'
 
- soil_fmax = 0.6841297549136836
+ soil_fmax = 0.5372282867050908
 
- baseflow_scalar = 0.5072545353770841
+ baseflow_scalar = 0.5238540530689362
 / 

@@ -1,7 +1,7 @@
 &modelio
   diri = "/glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho/bld/atm"
   diro = "/glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho/run"
-  logfile = "atm.log.3869275.desched1.240321-181130"
+  logfile = "atm.log.4132611.desched1.240415-213315"
 /
 &pio_inparm
   pio_netcdf_format = "64bit_offset"

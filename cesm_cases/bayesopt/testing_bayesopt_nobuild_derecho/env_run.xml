@@ -252,7 +252,7 @@
       timing tests.
     </desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:3869275.desched1, case.st_archive:3869276.desched1">
+    <entry id="JOB_IDS" value="case.run:4132611.desched1, case.st_archive:4132612.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>

@@ -23,7 +23,7 @@
  n_melt_glcmec = 10.0d00
  nlevsno = 12
  nsegspc = 35
- paramfile = '/glade/u/home/marielj/clm_frost/cesm_cases/clm5_params_bayesopt_stream.c171117.nc'
+ paramfile = '/glade/u/home/marielj/clm_frost/cesm_cases/clm5_params_bayesopt_stream_take2.c171117.nc'
  run_zero_weight_urban = .false.
  soil_layerstruct = '20SL_8.5m'
  use_bedrock = .true.
@@ -96,7 +96,7 @@
 &century_soilbgcdecompcascade
 /
 &soilhydrology_inparm
- baseflow_scalar = 0.5072545353770841
+ baseflow_scalar = 0.5238540530689362
 /
 &luna
  jmaxb1 = 0.093563

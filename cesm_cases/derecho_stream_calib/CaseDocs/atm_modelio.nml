@@ -1,7 +1,7 @@
 &modelio
   diri = "/glade/derecho/scratch/marielj/derecho_stream_calib/bld/atm"
   diro = "/glade/derecho/scratch/marielj/derecho_stream_calib/run"
-  logfile = "atm.log.3991412.desched1.240401-141335"
+  logfile = "atm.log.4084835.desched1.240411-105216"
 /
 &pio_inparm
   pio_netcdf_format = "64bit_offset"

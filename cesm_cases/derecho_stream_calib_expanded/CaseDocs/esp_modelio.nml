@@ -1,0 +1,13 @@
+&modelio
+  diri = "/glade/derecho/scratch/marielj/derecho_stream_calib_expanded/bld/esp"
+  diro = "/glade/derecho/scratch/marielj/derecho_stream_calib_expanded/run"
+  logfile = "esp.log.4110207.desched1.240413-094003"
+/
+&pio_inparm
+  pio_netcdf_format = ""
+  pio_numiotasks = -99
+  pio_rearranger = -99
+  pio_root = -99
+  pio_stride = -99
+  pio_typename = "nothing"
+/
