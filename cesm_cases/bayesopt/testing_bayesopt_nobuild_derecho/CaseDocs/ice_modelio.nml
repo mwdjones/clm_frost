@@ -1,7 +1,7 @@
 &modelio
   diri = "/glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho/bld/ice"
   diro = "/glade/derecho/scratch/marielj/testing_bayesopt_nobuild_derecho/run"
-  logfile = "ice.log.4132611.desched1.240415-213315"
+  logfile = "ice.log.9111745.desched1.250408-084207"
 /
 &pio_inparm
   pio_netcdf_format = "64bit_offset"

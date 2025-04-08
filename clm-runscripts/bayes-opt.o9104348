@@ -1,0 +1,68 @@
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/xarray/backends/plugins.py:71: RuntimeWarning: Engine 'gini' loading failed:
+cannot import name 'deprecated' from 'typing_extensions' (/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/typing_extensions.py)
+  warnings.warn(f"Engine {name!r} loading failed:\n{ex}", RuntimeWarning)
+/glade/u/home/marielj/clm_frost/clm-runscripts/bayes-opt-full.py:182: DeprecationWarning: 
+Passing acquisition function parameters or gaussian process parameters to maximize
+is no longer supported, and will cause an error in future releases. Instead,
+please use the "set_gp_params" method to set the gp params, and pass an instance
+ of bayes_opt.util.UtilityFunction using the acquisition_function argument
+
+  clm_optimizer.maximize(init_points = 10, n_iter = 30,
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:908: RuntimeWarning: invalid value encountered in cast
+  base = data.astype(np.int64)
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:912: RuntimeWarning: invalid value encountered in cast
+  data = (base * m + (frac * m).astype(np.int64)).view("timedelta64[ns]")
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/xarray/coding/times.py:613: RuntimeWarning: invalid value encountered in cast
+  int_num = np.asarray(num, dtype=np.int64)
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:908: RuntimeWarning: invalid value encountered in cast
+  base = data.astype(np.int64)
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:912: RuntimeWarning: invalid value encountered in cast
+  data = (base * m + (frac * m).astype(np.int64)).view("timedelta64[ns]")
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:908: RuntimeWarning: invalid value encountered in cast
+  base = data.astype(np.int64)
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:912: RuntimeWarning: invalid value encountered in cast
+  data = (base * m + (frac * m).astype(np.int64)).view("timedelta64[ns]")
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/xarray/coding/times.py:613: RuntimeWarning: invalid value encountered in cast
+  int_num = np.asarray(num, dtype=np.int64)
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:908: RuntimeWarning: invalid value encountered in cast
+  base = data.astype(np.int64)
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:912: RuntimeWarning: invalid value encountered in cast
+  data = (base * m + (frac * m).astype(np.int64)).view("timedelta64[ns]")
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:908: RuntimeWarning: invalid value encountered in cast
+  base = data.astype(np.int64)
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:912: RuntimeWarning: invalid value encountered in cast
+  data = (base * m + (frac * m).astype(np.int64)).view("timedelta64[ns]")
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/xarray/coding/times.py:613: RuntimeWarning: invalid value encountered in cast
+  int_num = np.asarray(num, dtype=np.int64)
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:908: RuntimeWarning: invalid value encountered in cast
+  base = data.astype(np.int64)
+/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/pandas/core/arrays/timedeltas.py:912: RuntimeWarning: invalid value encountered in cast
+  data = (base * m + (frac * m).astype(np.int64)).view("timedelta64[ns]")
+submit_jobs case.run
+Submit job case.run
+Submit job case.st_archive
+Case already exists.
+Traceback (most recent call last):
+  File "/glade/u/home/marielj/clm_frost/clm-runscripts/bayes-opt-full.py", line 182, in <module>
+    clm_optimizer.maximize(init_points = 10, n_iter = 30,
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/bayes_opt/bayesian_optimization.py", line 311, in maximize
+    self.probe(x_probe, lazy=False)
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/bayes_opt/bayesian_optimization.py", line 208, in probe
+    self._space.probe(params)
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/bayes_opt/target_space.py", line 236, in probe
+    target = self.target_func(**params)
+  File "/glade/u/home/marielj/clm_frost/clm-runscripts/bayes-opt-full.py", line 148, in blackbox_clmND_wte
+    LCE = calcCompoundLCE(observedWTE, modelWTE, observedQ, modelQ, observedET, modelET)
+  File "/glade/u/home/marielj/clm_frost/clm-runscripts/bayes-opt-full.py", line 96, in calcCompoundLCE
+    wteLCE = calcLCE(observedWTE, modelWTE)
+  File "/glade/u/home/marielj/clm_frost/clm-runscripts/bayes-opt-full.py", line 90, in calcLCE
+    r = rvalue(obs, mod)
+  File "/glade/u/home/marielj/clm_frost/clm-runscripts/bayes-opt-full.py", line 86, in rvalue
+    slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(x, y)
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/scipy/stats/_stats_mstats_common.py", line 167, in linregress
+    ssxm, ssxym, _, ssym = np.cov(x, y, bias=1).flat
+  File "<__array_function__ internals>", line 200, in cov
+  File "/glade/work/marielj/conda-envs/ncdf/lib/python3.9/site-packages/numpy/lib/function_base.py", line 2640, in cov
+    X = np.concatenate((X, y), axis=0)
+  File "<__array_function__ internals>", line 200, in concatenate
+ValueError: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 1 and the array at index 1 has size 365

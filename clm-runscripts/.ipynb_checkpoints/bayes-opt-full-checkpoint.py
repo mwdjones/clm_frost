@@ -26,54 +26,88 @@ CASE_NAME = 'testing_bayesopt_nobuild_derecho'
 setup_mef_case('/glade/u/home/marielj/clm_frost/cesm_cases/bayesopt', CASE_NAME, MODS = True, nyears = 7)
 CASE_DIR = '/glade/u/home/marielj/clm_frost/cesm_cases/bayesopt/testing_bayesopt_nobuild_derecho'
 
-'''LOAD CALIBRATION DATA'''
+'''LOAD CALIB DATA'''
+calib_year = 2015
+## Calibration Streamflow data
 dt2 =pd.read_csv('./rawdata/Streamflow_daily.csv', 
                  parse_dates=['Date'])
 
 # Coerce the data into the types specified in the metadata  
 dt2.Watershed = dt2.Watershed.astype('category') 
 
+#Convert cm/day to mm/day
+dt2['flow_mmday'] = 10*dt2['Flow (cm/day)']
+
 # Pull out 2017 year
-stream = dt2[(dt2.Date.dt.year == 2015)]
-stream = stream[stream.Watershed == 'S2'].reset_index(drop = True)
+stream_calib = dt2[dt2.Date.dt.year == calib_year]
+stream_calib = stream_calib[stream_calib.Watershed == 'S2'].reset_index(drop = True)
 
-#Convert cm/day to mm/sec
-m = 10/(60*60*24)
-stream['Flow_mms'] = m*stream['Flow (cm/day)']
-
-'''Load calibration WTE data'''               
+## Load calibration WTE              
 dt1 =pd.read_csv('./rawdata/MEF_daily_peatland_water_table.csv', skiprows = 1, sep = ",",
                  names=["PEATLAND", "DATE", "WTE", "FLAG"],
                  parse_dates=['DATE'], 
                  na_values={'WTE':['NA',], 'FLAG':['NA',]})
 
-# Coerce the data into the types specified in the metadata  
+# Coerce the data into the types specified in theA metadata  
 dt1.PEATLAND = dt1.PEATLAND.astype('category') 
-
 dt1.WTE = pd.to_numeric(dt1.WTE, errors ='coerce')  
 dt1.FLAG = dt1.FLAG.astype('category') 
 
-# Pull out 2017 year
-wte = dt1[dt1.DATE.dt.year == 2015]
-wte = wte[wte.PEATLAND == 'S2'].reset_index(drop = True)
-wte['WTD'] = -(422.0 - wte.WTE)
+bog_elev = 422.06
+dt1['WTD'] =  -(bog_elev - dt1.WTE)
 
+# Pull out calib year
+wte_calib = dt1[dt1.DATE.dt.year == calib_year]
+wte_calib = wte_calib[wte_calib.PEATLAND == 'S2'].reset_index(drop = True)
+
+## Load calibration ET data
+dt3 = xr.load_dataset('/glade/derecho/scratch/swensosc/Ameriflux/AMF_US-MBP_set.nc').to_dataframe().reset_index()
+
+#Replace Nan
+flux = dt3.replace(-9999, np.NaN)
+flux['time'] = pd.to_datetime(flux.time).dt.round('15min')
+#convert LE to AET
+lhv = 2.5e6 #J/kg latent heat of vaporization
+sphh = 1800 # seconds per half hour
+flux['OET'] = flux.LE/lhv * sphh #et in mm/halfhour
+#resample to daily timestep
+flux_daily = flux.set_index('time').resample('D').mean().reset_index() #et in mm/day
+flux_daily['OET'] = flux_daily['OET']*24 #half hours to daily (halved while i figure wtf id going on)
+flux_daily = flux_daily[(flux_daily.time.dt.year > 2011) & (flux_daily.time.dt.year < 2018)].reset_index(drop = True)
+
+#pull out calibration data
+flux_calib = flux_daily[flux_daily.time.dt.year == calib_year]
 
 '''FUNCTION SETUP'''
-def rsquared(x, y):
+def rvalue(obs, mod):
+    nanmask = np.isfinite(obs)
+    y = obs[nanmask]
+    x = mod[nanmask]
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(x, y)
-    return r_value**2
+    return r_value
 
-'''
-def blackbox_clmND(slatop, leaflong, frootleaf, slopebeta, fff, baseflow, fmax):
+def calcLCE(obs, mod):
+    r = rvalue(obs, mod)
+    alpha = np.nanstd(mod)/np.nanstd(obs)
+    beta = np.nanmean(mod)/np.nanmean(obs)
+    return 1 -np.sqrt(((r*alpha - 1)**2) + ((r/alpha - 1)**2) + (beta - 1)**2)
+
+def calcCompoundLCE(observedWTE, modelWTE, observedQ, modelQ, observedET, modelET):
+    wteLCE = calcLCE(observedWTE, modelWTE)
+    qLCE = calcLCE(observedQ, modelQ)
+    etLCE = calcLCE(observedET, modelET)
+
+    #Could replace later with different weights
+    return np.mean([wteLCE, qLCE, etLCE])
+
+def blackbox_clmND_wte(baseflow, fmax, slopebeta, fff, grassslope):
     #change parameter in netcdf file
-    target_param_file = '/glade/work/marielj/inputdata/lnd/clm2/paramdata/clm5_params_augmented_base.c171117.nc'
-    pft = 12 #arctic grass  
+    target_param_file = '/glade/work/marielj/inputdata/lnd/clm2/paramdata/clm5_params_augmented_base.c171117.nc' 
+    base_grass_ms = 5.25
     
     #PFT Params
-    change_pft_param('slatop', pft, slatop, target_param_file)
-    change_pft_param('leaf_long', pft, leaflong, target_param_file)
-    change_pft_param('froot_leaf', pft, frootleaf, target_param_file)
+    #change grass parameters 
+    change_pft_param('medlynslope', 12, grassslope*base_grass_ms, target_param_file) #grass
     
     #NON PFT Params
     change_param('slopebeta', slopebeta, target_param_file)
@@ -100,73 +134,24 @@ def blackbox_clmND(slatop, leaflong, frootleaf, slopebeta, fff, baseflow, fmax):
     os.chdir(SCRATCH_DIR)
     
     #Open data h1 data file
-    dat = xr.load_dataset(CASE_NAME + '.clm2.h1.2015-01-01-00000.nc')
-    #mean_wtd = -np.mean(dat.ZWT.values) For WTE comparison
-    stream_mod = dat.QRUNOFF.values.reshape(365)
-
-    #Calculate correlation
-    R = rsquared(stream.Flow_mms.values, stream_mod)
+    data = xr.load_dataset(CASE_NAME + '.clm2.h1.2015-01-01-00000.nc')
+    #Compute correlation metric
+    spday = 86400
+    data['ET'] = data.QVEGT + data.QSOIL
+    observedWTE = np.array(wte_calib.WTD)
+    modelWTE = -np.array(data.sel(time = slice("2015-01-01", "2015-12-31")).ZWT.values.ravel())
+    observedQ = np.array(stream_calib.flow_mmday)
+    modelQ = spday*np.array(data.sel(time = slice("2015-01-01", "2015-12-31")).QRUNOFF.values.ravel())
+    observedET = np.array(flux_calib.OET)
+    modelET = spday*np.array(data.sel(time = slice("2015-01-01", "2015-12-31")).ET.values.ravel())
+    #Compound Lee Choi Efficiency
+    LCE = calcCompoundLCE(observedWTE, modelWTE, observedQ, modelQ, observedET, modelET)
     
     #remove data
     os.remove(CASE_NAME + '.clm2.h1.2015-01-01-00000.nc')
     
-    #return average annual WTE
-    #return mean_wtd
-
-    #return R2
-    return R
-'''
-
-def blackbox_clmND_wte(slatop, leaflong, frootleaf, slopebeta, fff, baseflow, fmax):
-    #change parameter in netcdf file
-    target_param_file = '/glade/work/marielj/inputdata/lnd/clm2/paramdata/clm5_params_augmented_base.c171117.nc'
-    pft = 12 #arctic grass  
-    
-    #PFT Params
-    change_pft_param('slatop', pft, slatop, target_param_file)
-    change_pft_param('leaf_long', pft, leaflong, target_param_file)
-    change_pft_param('froot_leaf', pft, frootleaf, target_param_file)
-    
-    #NON PFT Params
-    change_param('slopebeta', slopebeta, target_param_file)
-    change_param('fff', fff, target_param_file)    
-    
-    os.chdir(CASE_DIR)
-    
-    #Namelist Params
-    change_nl_param('soil_fmax', fmax)
-    change_nl_param('baseflow_scalar', baseflow)
-    
-    #run case
-    pipe = subprocess.Popen(['./case.submit'], stdout=subprocess.PIPE)
-    #result = pipe.communicate()[0]
-    #print(result)
-    #print(CASE_NAME + " Run Complete")
-    
-    #time delay -- check if archived data exists, if not wait 5 more seconds
-    SCRATCH_DIR = '/glade/derecho/scratch/marielj/archive/' + CASE_NAME + '/lnd/hist/'
-    while(not os.path.exists(SCRATCH_DIR + CASE_NAME + '.clm2.h1.2015-01-01-00000.nc')):
-        time.sleep(5)
-    
-    #find WTE data in scracth directory
-    os.chdir(SCRATCH_DIR)
-    
-    #Open data h1 data file
-    dat = xr.load_dataset(CASE_NAME + '.clm2.h1.2015-01-01-00000.nc')
-    mod = -np.array(dat.ZWT).reshape(365)
-    meas = np.array(wte.WTD)
-    
-    #Compute correlation
-    R = rsquared(meas, mod)
-    
-    #remove data
-    os.remove(CASE_NAME + '.clm2.h1.2015-01-01-00000.nc')
-    
-    #return average annual WTE
-    #return mean_wtd
-
-    #return R2
-    return R
+    #return LCE
+    return LCE
 
 '''SAVE PROGRESS'''
 from bayes_opt.logger import JSONLogger
@@ -174,29 +159,27 @@ from bayes_opt.event import Events
 
 clm_optimizer = BayesianOptimization(
     f = blackbox_clmND_wte,
-    pbounds = {'slatop': (0.004, 0.04), 
-                'leaflong':(0.32, 2.0),
-                'frootleaf':(0.015, 2.0),
-                'slopebeta': (-1000, 10),
-                'fff': (0.1, 5),
-                'baseflow': (0, 10),
-                'fmax' : (0.1, 0.7)},
+    pbounds = {'baseflow': (0,10),
+                'fmax': (0.1, 0.7), 
+                'slopebeta' : (-10e2, 10), 
+                'fff' : (0.1, 5), 
+                'grassslope' : (1, 40)},
     random_state = 4839,
 )
 
 #Load and continue logger
-load_logs(clm_optimizer, logs=["./logs/clm_logs_wte.json"])
+load_logs(clm_optimizer, logs=["/glade/u/home/marielj/clm_frost/clm-runscripts/logs/clm_logs_lce.json"])
 print("New optimizer is now aware of {} points.".format(len(clm_optimizer.space)))
 
 #logger object records optimization search
-logger = JSONLogger(path="/glade/u/home/marielj/clm_frost/clm-runscripts/logs/clm_logs_wte.json", reset = False)
+logger = JSONLogger(path="/glade/u/home/marielj/clm_frost/clm-runscripts/logs/clm_logs_lce.json", reset = False)
 clm_optimizer.subscribe(Events.OPTIMIZATION_STEP, logger)
 
 #Aquisition function
 acquisition_function = UtilityFunction(kind = "ucb", kappa = 0.1)
 
 '''RUN OPTIMIZATION'''
-clm_optimizer.maximize(init_points = 0, n_iter = 80,
+clm_optimizer.maximize(init_points = 0, n_iter = 110,
                        aquisition_function = acquisition_function,
                        allow_duplicate_points = True)
 

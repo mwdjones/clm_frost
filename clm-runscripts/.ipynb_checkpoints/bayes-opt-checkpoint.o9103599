@@ -1,0 +1,5 @@
+Case already exists.
+Traceback (most recent call last):
+  File "/glade/u/home/marielj/clm_frost/clm-runscripts/bayes-opt-full.py", line 41, in <module>
+    stream_calib = dt2[dt2.Date.dt.year == calib_year]
+NameError: name 'calib_year' is not defined

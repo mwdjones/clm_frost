@@ -10,9 +10,9 @@
 
  hist_fincl2 = 'RAIN', 'H2OSNO', 'QSOIL', 'QVEGT', 'QSNOMELT', 'QRUNOFF', 'ZWT', 'ZWT_PERCH', 'SNOW', 'TSA', 'SOILICE', 'QINFL', 'QOVER', 'H2OSOI', 'TSOI'
 
- paramfile = '/glade/work/marielj/inputdata/lnd/clm2/paramdata/clm5_params_augmented_base.c171117.nc'
+ paramfile = '/glade/work/marielj/inputdata/lnd/clm2/paramdata/clm5_params_augmented_base_lce_calibrated.c171117.nc'
 
- soil_fmax = 0.47736542568659723
+ soil_fmax = 0.7
 
- baseflow_scalar = 3.685549515207808
+ baseflow_scalar = 0
 / 
